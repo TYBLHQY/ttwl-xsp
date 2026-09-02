@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>4.2 中子星</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="/usr/share/javascript/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="/usr/share/javascript/katex/katex.min.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">4.2 中子星</h1>
+</header>
+<h3 id="中子星">4.2 中子星</h3>
+<p>1932年英国卡文迪许实验室的查德威克(J.
+Chadwick)发现中子后不久，前苏联物理学家朗道(L.
+Landau)就指出，在极高的温度和压力下，质子和电子可能结合为中子，因此可能存在完全由中子构成的稳定的中子星。1934年，两位在美国工作的欧洲天体物理学家巴德(W.
+Baade, 德国)和兹威基(F. Zwicky,
+瑞士)又提出，中子星可能是超新星爆发的产物，即星体爆炸后残留的致密星核。他们在一篇短文中写道：“超新星代表从普通恒星到中子星的转变。所谓中子星，就是恒星的最终阶段，它完全由挤得极紧的中子构成。”随后(1939年)，美国物理学家奥本海默(J.
+Oppenheimer)和沃尔科夫(G.
+Volkoff)从理论上建立了第一个定量的中子星模型，但他们采用的物态方程是理想的简并中子气模型。这显然过于简单了，但当时也只能如此，因为那时大家对致密中子状态下的物质特性几乎一无所知。</p>
+<h4 id="中子星的结构">4.2.1 中子星的结构</h4>
+<p>中子星依靠简并中子压来实现静力学平衡，所以对它的讨论很多地方类似于白矮星，但要把电子换成中子。让我们估计一下中子星的基本物理参数。首先来看简并时中子的数密度。由(4.4)并把
+<span class="math inline">m_{e}</span> 换成中子的质量 <span
+class="math inline">m_{n}</span> （即取中子的费米动量 <span
+class="math inline">p_{F}\approx m_{n}c</span> ），得</p>
+<p><span class="math display">
+n _ {\mathrm{n}} \approx \frac {8 \pi}{3} \left(\frac {m _ {\mathrm{n}}
+c}{h}\right) ^ {3} \approx 1 0 ^ {3 9} / \mathrm{cm} ^ {3}\tag{4.17}
+</span></p>
+<p>可见由于中子的质量为电子质量的 <span class="math inline">\sim
+10^{3}</span> 倍，结果使中子数密度为白矮星情况下电子数密度的 <span
+class="math inline">\sim 10^{9}</span>
+倍。这样高的数密度使得中子之间的距离仅为 <span class="math inline">\sim
+n_{\mathrm{n}}^{-1 / 3}\sim 10^{-13}</span>
+cm，相当于中子一个挨一个地排列。再由(4.5)，相应的物质密度为</p>
+<p><span class="math display">
+\rho \approx m _ {\mathrm{p}} \mu_ {\mathrm{n}} n _ {\mathrm{n}} \approx
+1 0 ^ {1 5} \mathrm{g/cm} ^ {3}\tag{4.18}
+</span></p>
+<p>注意此时 <span class="math inline">\mu_{n}</span>
+表示每一个中子对应的核子数，显然 <span
+class="math inline">\mu_{n}=1</span> 。现在一般认为，中子星的密度范围是
+<span class="math inline">\rho\sim10^{14\sim15}~g/cm^{3}</span>
+。这样的密度实际上已经接近核子自身的密度，因此相互作用中的核力就变得非常重要，而且广义相对论效应也不能忽略。</p>
+<p>前面讨论白矮星时曾得到钱德拉塞卡极限(4.13)，现如果取 <span
+class="math inline">\mu_{n}=1</span> ，则可得中子星质量上限的估计值为
+<span class="math inline">M\sim6M_{\odot}</span>
+。但由于至今对强相互作用时的物态方程还没有统一的认识，而且中子星的结构和性质对物态方程十分敏感，故中子星的质量上限目前仍没有一个确定的值，按不同的物态方程计算出来的值在
+<span class="math inline">0.7\sim2.9M_{\odot}</span>
+之间。现在普遍认为，静态中子星的质量上限是 <span
+class="math inline">2.2M_{\odot}</span> ，而转动中子星的质量上限是 <span
+class="math inline">2.9M_{\odot}</span>
+。超过了这样的极限，中子星将不可避免地坍缩成为黑洞。</p>
+<p>作为估计，我们取中子星的质量为太阳质量，按(4.14)可以算出它的半径约为
+<span class="math inline">R\approx10\ km</span> ，相当于白矮星半径的
+<span class="math inline">m_{c}/m_{n}\sim1/1\ 000</span>
+，可见它的体积非常小。设想中子星位于最近的恒星那样近的距离（～10光年），且表面温度与太阳一样为6
+000 K，则视星等将是 <span class="math inline">27^{m}</span>
+，这是用光学方法目前极难观测到的。故人们首先是用射电方法观测到中子星，即下一节要讨论的脉冲星。</p>
+<p>从中子星表面到中心，密度从通常的铁晶体密度很快增加到 <span
+class="math inline">10^{15} \mathrm{~g/cm}^3</span>
+，变化范围超过10个以上的数量级。现在知道，中子星外部有一层大气（等离子体）。表面以内是外壳，开始主要是
+<span class="math inline">^{56}\mathrm{Fe}</span>
+原子核形成的晶格点阵以及简并的电子气体，表层密度大约为 <span
+class="math inline">\sim 10^{6} \mathrm{~g/cm}^3</span>
+。从外向内密度逐渐增加，电子的费米能量也逐渐升高，最后高到迫使电子同核内质子结合成一系列富含中子的核，例如
+<span class="math inline">^{62}\mathrm{Ni}, ^{82}\mathrm{Ge},
+^{80}\mathrm{Zn}, ^{124}\mathrm{Mo}</span> 和 <span
+class="math inline">^{118}\mathrm{Kr}</span> ，最后的 <span
+class="math inline">^{118}\mathrm{Kr}</span>
+包含82个中子和36个质子。核内的中子化过程一直进行到密度为 <span
+class="math inline">4.3 \times 10^{11} \mathrm{~g/cm}^3</span>
+，这时还几乎没有核外的自由中子。超过这一密度，就过渡到内壳，此时开始有自由中子出现，主要是含中子最丰富的
+<span class="math inline">^{118}\mathrm{Kr}</span>
+释放中子，这个过程称为中子漏(neutron
+drip)。故内壳的中子星物质是由形成点阵的重原子核、自由电子以及自由中子所组成的，压力主要还是以简并电子压为主。外壳和内壳都是固态的，总厚度大约为
+<span class="math inline">1 \mathrm{~km}</span>
+。内壳以内是核区，此时中子漏过程随着密度的增大而越发显著，当密度增加到
+<span class="math inline">\sim 2 \times 10^{14} \mathrm{~g/cm}^3</span>
+（即每立方厘米2亿吨）以上时，原子核就完全离解消失，绝大部分核子中子化，中子星物质变成杂有少量电子、质子的连续中子流体。在这样高的密度下，物态方程远比理想气体的物态方程复杂。当密度超过
+<span class="math inline">10^{15} \mathrm{~g/cm}^3</span>
+，物态方程就变得越来越不明确，而当密度达到 <span
+class="math inline">10^{16} \mathrm{~g/cm}^3</span>
+以上时，物态方程就完全不得而知了。这是最重的中子星中心可能达到的密度，在这样的密度下，粒子间距为
+<span class="math inline">0.7 \mathrm{fm}(1 \mathrm{fm} = 10^{-13}
+\mathrm{fm})</span> 。为了测定如此短程的核力，需要对能量接近 <span
+class="math inline">1 \mathrm{GeV}</span>
+的中子相互作用进行测量。正是由于核区物态方程的不确定性，使得中子星质量上限的各种计算结果有相当大的分歧。</p>
+<p>简并中子流体处于超流状态，即粘滞力几乎为零，但简并电子气并没有相应地变为超导，仍属于正常状态。在简并中子流体的情况下，能量接近费米能的中子彼此吸引，形成中子对；然后，能谱中出现大约1
+MeV宽的间隙，这一间隙阻碍了粘性所必需的能量再分布，使流体出现超流性质。对于质子流体，则会出现超导性。因而，整个中子流体区域是超流的，同时质子是超导的，但电子是正常的。中子流体区域从密度
+<span class="math inline">2\times10^{14}\ g/cm^{3}</span> 延伸到大约
+<span class="math inline">10^{15}\ g/cm^{3}</span> ，其厚度为8
+km左右。</p>
+<p>密度达 <span class="math inline">10^{15}</span> g/cm <span
+class="math inline">^{3}</span>
+时，中子的费米能很大，会产生下述反应：</p>
+<p><span class="math display">
+\begin{array}{r l}\mathrm{n+n→p+} \Sigma^ {-}, \mathrm{n+} \Lambda ,
+\mathrm{p+} \Delta^ {-}\\\mathrm{e} ^ {-} + \mathrm{p} \rightarrow
+\Lambda + \nu_ {\mathrm{e}}\\\mathrm{e} ^ {-} + \mathrm{n} \rightarrow
+\Sigma^ {-} + \nu_ {\mathrm{e}}\end{array}\tag{4.19}
+</span></p>
+<p>即出现超子。当电子的费米能量达到 106 MeV，亦可以发生</p>
+<p><span class="math display">
+\mathrm{e} ^ {-} \rightarrow \mu^ {-} + \bar {\nu} _ {\mu} + \nu_
+{\mathrm{e}}\tag{4.20}
+</span></p>
+<p>即出现 <span class="math inline">\mu</span> 子。密度大于 <span
+class="math inline">10^{15} ~g/cm^{3}</span>
+的区域为中子星的核心，它是固态的，半径约</p>
+<p>1 km。这个区域的物质主要由 <span class="math inline">\Lambda</span>
+和 <span class="math inline">\Sigma</span>
+超子组成。也有人认为，当密度超过核子密度时，可能会出现 <span
+class="math inline">\pi^{-}</span> 介子：</p>
+<p><span class="math display">
+\mathrm{n} \rightarrow \mathrm{p} + \pi^ {-}\tag{4.21}
+</span></p>
+<p>因为 <span class="math inline">\pi^{-}</span>
+是玻色子，因而就可能形成与通常的玻色-爱因斯坦凝聚一样的 <span
+class="math inline">\pi</span>
+凝聚相。但是，由于强相互作用的影响，这一看法还没有得到公认。还有人认为，也可能核心的物质是夸克物质或强子汤等形式。表4.2列出了中子星内部结构各部分的主要特性，结构简图见图4.2。</p>
+<p>表 4.2 中子星内部的主要物理特征</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>密度</th>
+<th>主要物理特征</th>
+<th>厚度</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>外壳</td>
+<td><span class="math inline">10^6 \sim 4.3 \times 10^{11} \text{
+g/cm}^3</span></td>
+<td>固体外壳,主要由Fe原子核的晶格点阵和简并自由电子气构成</td>
+<td>≤1 km</td>
+</tr>
+<tr class="even">
+<td>内壳</td>
+<td><span class="math inline">4.3 \times 10^{11} \sim 2 \times 10^{14}
+\text{ g/cm}^3</span></td>
+<td>重核晶格,自由中子和自由电子</td>
+<td>&lt;1 km-</td>
+</tr>
+<tr class="odd">
+<td>内部</td>
+<td><span class="math inline">2 \times 10^4 \sim 10^{15} \text{
+g/cm}^3</span></td>
+<td>主要是超流中子流体,并杂有少量超流质子、电子、μ-子,状态是超流、超导</td>
+<td>~8 km</td>
+</tr>
+<tr class="even">
+<td>核心</td>
+<td><span class="math inline">\geqslant 10^{15} \text{
+g/cm}^3</span></td>
+<td>固态超子核,亦可能出现π凝聚相、夸克等形式</td>
+<td>≤1 km</td>
+</tr>
+</tbody>
+</table>
+<p><img
+src="images/18f626a43eadca396f6c430c233ae7c1f9412bd7ea4326cccd0bb92be630ab94.jpg" />
+图4.2 中子星结构简图</p>
+<h4 id="中子星的自转与磁场">4.2.2 中子星的自转与磁场</h4>
+<p>在恒星坍缩成中子星的过程中,如果角动量完全守恒,则坍缩后的中子星可以获得很高的自转角速度。我们用一个简单的模型来对此做一估计。设恒星坍缩前</p>
+<p>后都可以看成是均匀球体，则角动量为</p>
+<p><span class="math display">
+J = I \omega = \frac {2}{5} M R ^ {2} \omega\tag{4.22}
+</span></p>
+<p>假定坍缩前恒星的各项参数与太阳差不多，即 <span class="math inline">M,
+R, \omega</span> 取为太阳的值（这基本上是合理的，但对于自转角速度 <span
+class="math inline">\omega</span>
+而言可能还是保守的估计，因为与我们看到的其他恒星相比，太阳的自转并不算很快）。由于
+<span class="math inline">J</span>
+在坍缩过程中保持为常量，恒星总质量也假设基本不变，故坍缩后有</p>
+<p><span class="math display">
+\omega R ^ {2} = \omega_ {\odot} R _ {\odot} ^ {2}\tag{4.23}
+</span></p>
+<p>即</p>
+<p><span class="math display">
+\frac {\omega}{\omega_ {\odot}} = \left(\frac {R _ {\odot}}{R}\right) ^
+{2} \approx 5 \times 1 0 ^ {9}\tag{4.24}
+</span></p>
+<p>计算中取 <span class="math inline">R \approx 10 \, km</span>
+。太阳的自转周期约为 30 天 ( <span class="math inline">\sim 2.6 \times
+10^{6} \, s</span> )，因而由 (4.24) 算出中子星的自转周期为</p>
+<p><span class="math display">
+P \approx \frac {2 . 6 \times 1 0 ^ {6}}{5 \times 1 0 ^ {9}} \mathrm{s}
+\approx 0. 5 \mathrm{ms}\tag{4.25}
+</span></p>
+<p>即约为毫秒量级，也就是一秒钟内要旋转1000周以上。这样高的自转速度在通常恒星的情况下是绝对不可能出现的。中子星内部大部分是超流的流体，但在高速自转的情况下，流体内部会产生强烈涡动（旋涡），这将导致某种粘滞性出现，结果把流体内部与固态外层耦合在一起。</p>
+<p>类似于角动量的讨论,如果恒星表面的磁通量在坍缩时也是守恒的,则由于磁通量正比于磁场强度和表面积,就会有</p>
+<p><span class="math display">
+B R ^ {2} = \text { 常   量 }\tag{4.26}
+</span></p>
+<p>因此，磁场强度 B 应当反比于 <span class="math inline">R^{2}</span>
+，这一比率与（4.24）是一致的。假设中子星起初具有太阳表面的磁场强度，即大约
+1 高斯，按（4.24）中子星表面磁场强度就可达到约 <span
+class="math inline">10^{10}</span> 高斯。实际上，恒星表面 100
+高斯的磁场是很普遍的，更不用说宇宙中还有磁场为几千高斯的磁星，因而中子星表面磁场很容易达到
+<span class="math inline">10^{12}</span>
+高斯甚至更高。虽然这样来解释磁场的起源比较简单直观，但起初对这么强的磁场的寿命问题还是有争论的，因为欧姆耗散可能会使强磁场在短时间内衰减掉。目前的看法是，在高速自转的情况下，中子星内部的超导电性有助于建立起很强的磁场。强的磁场又有高速转动，必然会产生强大的电磁辐射，这就是脉冲星。</p>
+<p>总之，中子星具有强引力、强磁场以及极高的密度，它本身包含了自然界全部四种基本相互作用（引力、强、弱以及电磁），可以称为宇宙极端条件下的综合实验室。因此，对于研究物质深层次结构、探索极端条件下的物理规律，中子星起着一</p>
+<p>种独特的作用。</p>
+<p>最后，再补充一点关于中子星温度的情况。当中子星刚刚被超新星爆发的烈焰“锻造”出来时，它的温度极高，可达
+<span class="math inline">T\sim10^{11}</span>
+K。在形成后的第一天，它的冷却是通过所谓的乌卡（URCA）过程（乌卡是巴西里约热内卢的一家著名赌场，据说在这家赌场中，钱可以被神不知鬼不觉地从一个不走运的人身上转移掉），即</p>
+<p><span class="math display">
+\begin{array}{r l}\mathrm{n}&amp;\rightarrow \mathrm{p} + \mathrm{e} ^
+{-} + \overline {{\nu}} _ {\mathrm{e}}, \quad \mathrm{n} + \mathrm{e} ^
+{+} \rightarrow \mathrm{p} + \overline {{\nu}} _
+{\mathrm{e}}\\&amp;\quad \mathrm{p} + \mathrm{e} ^ {-} \rightarrow
+\mathrm{n} + \nu_ {\mathrm{e}}\end{array}\tag{4.27}
+</span></p>
+<p>当中子和质子像这样来回相互转变时，大量的中微子和反中微子产生出来。它们悄无声息地离开中子星而逃逸到周围的宇宙空间，同时携带走大量的能量，这就使得中子星发生迅速冷却。经过大约一天的时间，中子和质子都进入低能的简并状态，中子星内部的温度也降到大约
+<span class="math inline">10^{9}\mathrm{K}</span>
+，乌卡过程就停止了。但其他的中微子过程继续主导冷却，这一情况将持续1000年左右，之后的冷却过程由星体表面发出的光辐射所主导。当中子星的年龄在几百年时，内部温度降到
+<span class="math inline">10^{8}\mathrm{K}</span>
+，表面温度降到几百万度。在此后大约1万年的时间内，表面温度将一直维持在
+<span class="math inline">10^{6}\mathrm{K}</span> 左右。</p>
+</body>
+</html>

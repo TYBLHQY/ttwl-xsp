@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>3.4 积分定理（位力定理）</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="/usr/share/javascript/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="/usr/share/javascript/katex/katex.min.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">3.4 积分定理（位力定理）</h1>
+</header>
+<h3 id="积分定理位力定理">3.4 积分定理(位力定理)</h3>
+<p>第 2
+章中我们讨论了多粒子系统能量的位力定理。现在我们再就恒星的能量做一讨论。联立上一节中恒星的质量方程与静力学平衡方程，得</p>
+<p><span class="math display">
+4 \pi r ^ {2} \mathrm{d} P = - \frac {G m (r)}{r ^ {2}} \mathrm{d}
+m\tag{3.83}
+</span></p>
+<p>两边同乘 <span class="math inline">r</span> ，并对整个恒星积分：</p>
+<p><span class="math display">
+\int_ {0} ^ {R} 4 \pi r ^ {3} \mathrm{d} P = - \int_ {0} ^ {M} \frac {G
+m (r)}{r} \mathrm{d} m\tag{3.84}
+</span></p>
+<p>等号左边分部积分后，上式变成</p>
+<p><span class="math display">
+(4 \pi r ^ {3} P) \mid_ {0} ^ {r = R} - 3 \int_ {0} ^ {R} 4 \pi r ^ {2}
+P \mathrm{d} r = - \int_ {0} ^ {M} \frac {G m (r)}{r} \mathrm{d}
+m\tag{3.85}
+</span></p>
+<p>注意到 r = R 时 P = 0，故(3.85)左边第一项的结果为零，方程化为</p>
+<p><span class="math display">
+3 \int_ {0} ^ {R} \frac {4 \pi \rho r ^ {2}}{\rho} P \mathrm{d} r = 3
+\int_ {0} ^ {M} \frac {P}{\rho} \mathrm{d} m = \int_ {0} ^ {M} \frac {G
+m (r)}{r} \mathrm{d} m\tag{3.86}
+</span></p>
+<p>再利用热力学关系</p>
+<p><span class="math display">
+P = (\gamma - 1) \varepsilon , \quad \frac {P}{\rho} = (\gamma - 1)
+\frac {\varepsilon}{\rho}\tag{3.87}
+</span></p>
+<p>其中， <span class="math inline">\gamma</span> 是多方指数， <span
+class="math inline">\varepsilon</span>
+是单位体积恒星物质的内能。不难看出，(3.86)第二个等号的左边有</p>
+<p><span class="math display">
+\int_ {0} ^ {M} \frac {P}{\rho} \mathrm{d} m = \int_ {0} ^ {M} (\gamma -
+1) \frac {\varepsilon}{\rho} \mathrm{d} m = (\gamma - 1) U\tag{3.88}
+</span></p>
+<p>这里 U 为恒星的总内能(提示: <span
+class="math inline">\varepsilon/\rho</span> 相当于单位质量的内能, 故对 m
+积分得出总的内能); 相应地, (3.86) 第二个等号的右边有</p>
+<p><span class="math display">
+\int_ {0} ^ {M} \frac {G m (r)}{r} \mathrm{d} m = - V\tag{3.89}
+</span></p>
+<p>显然 <span class="math inline">V</span>
+就是整个恒星的自引力势能。因此，(3.86)最后给出</p>
+<p><span class="math display">
+3 (\gamma - 1) U + V = 0\tag{3.90}
+</span></p>
+<p>这就是恒星的总内能(相当于粒子系统的总动能)和引力势能所满足的位力定理。利用这一定理,可以得到恒星的总能量是</p>
+<p><span class="math display">
+E = U + V = - (3 \gamma - 4) U = \frac {3 \gamma - 4}{3 (\gamma - 1)}
+V\tag{3.91}
+</span></p>
+<p>因为一个稳定的引力束缚系统必有 E&lt;0，故上式要求 <span
+class="math inline">\gamma&gt;4/3</span> ，恒星才能有稳定的结构。 <span
+class="math inline">\gamma\leqslant4/3</span> 意味着 <span
+class="math inline">E\geqslant0</span>
+，此时恒星的结构不稳定（例如上一节（3.76）所示的相对论性简并气体的情况）。还有一个特例是
+<span class="math inline">\gamma=1</span> ，由（3.90）看到，此时无论
+U（或 E）取为何值，V
+总为零。一个自引力势能总为零的系统，是不会形成任何束缚态结构的。</p>
+<p>根据位力定理我们可以得到一个重要的结论:
+恒星是一个负热容系统。这是由于, 当恒星以光度 <span class="math inline">L
+= -dE/dt &gt; 0</span> 辐射能量时, 总能量减少, 即 <span
+class="math inline">dE/dt &lt; 0</span> 。根</p>
+<p>据位力定理有</p>
+<p><span class="math display">
+E = - (3 \gamma - 4) U\tag{3.92}
+</span></p>
+<p>因而</p>
+<p><span class="math display">
+\frac {\mathrm{d} E}{\mathrm{d} t} &lt;   0 \Rightarrow \frac
+{\mathrm{d} U}{\mathrm{d} t} &gt; 0 (\text {温度升高})\tag{3.93}
+</span></p>
+<p>恒星的能量由于辐射而失去一部分，但温度却上升了，即表现出负的比热。这是典型的负热容系统，是有引力介入时的热力学特征。此时由(3.90)有</p>
+<p><span class="math display">
+\frac {\mathrm{d} V}{\mathrm{d} t} &lt;   0 (\text {收缩})\tag{3.94}
+</span></p>
+<p>可见内能的增加以及辐射的能量，都来源于收缩时减少的引力能。普通恒星一般由非相对论性气体构成，其物态方程相应于
+<span class="math inline">\gamma = 5 / 3</span> ，此时(3.92)化为</p>
+<p><span class="math display">
+E = - U\tag{3.95}
+</span></p>
+<p>位力定理(3.90)也随之化为</p>
+<p><span class="math display">
+2 U + V = 0\tag{3.96}
+</span></p>
+<p>这与第2章中多粒子系统位力定理的形式完全相同(见式(2.40))。在这一情况下,我们有下面的关系</p>
+<p><span class="math display">
+L = - \frac {\mathrm{d} E}{\mathrm{d} t} = \frac {\mathrm{d}
+U}{\mathrm{d} t} = - \frac {1}{2} \frac {\mathrm{d} V}{\mathrm{d}
+t}\tag{3.97}
+</span></p>
+<p>即减少的引力能一半变成了内能，另一半变成了辐射能。</p>
+</body>
+</html>

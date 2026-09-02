@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>2.2 温度</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="/usr/share/javascript/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="/usr/share/javascript/katex/katex.min.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">2.2 温度</h1>
+</header>
+<h3 id="温度">2.2 温度</h3>
+<h4 id="色指数与色温度">2.2.1 色指数与色温度</h4>
+<p>我们不可能像在实验室里那样去直接测量恒星或其他天体的温度，而只能通过间接的办法进行。上面已经提到，恒星在不同波长处的亮度是不同的。这其中的原因是，恒星发出的电磁辐射可以近似看成是黑体辐射，而黑体辐射有一个随波长而变的强度分布，即普朗克分布。同时，根据黑体辐射的维恩(W.
+Wien)位移定律，黑体辐射能量分布曲线最大值对应的波长 <span
+class="math inline">\lambda_{max}</span> 与黑体温度 T 之间的关系为</p>
+<p><span class="math display">
+\lambda_ {\max} = \frac {b}{T}\tag{2.7}
+</span></p>
+<p>其中 <span class="math inline">b</span> 是维恩位移常量， <span
+class="math inline">b = 2.898 \times 10^{-3} \mathrm{~m} \cdot
+\mathrm{K}</span> 。显然温度越高， <span
+class="math inline">\lambda_{\max}</span>
+越向短波方向移动（参见图2.1）。也就是说，表面温度高的恒星，其辐射能量主要位于短波区；表面温度低的恒星，其辐射能量主要位于长波区。因此恒星的颜色能告诉我们恒星表面的温度。</p>
+<p><img
+src="images/9cb7802dbfde4a6dcfe91f72c0890aa843dbdddacb962c7fc373f48344c987ef.jpg" />
+图 2.1 不同温度的黑体辐射谱</p>
+<p>为了测出 <span class="math inline">\lambda_{\mathrm{max}}</span>
+，可以用一系列波长不同但波长间隔很小的滤光片去逐个测试。但这样做的效率很低也没有必要。天文学家有一个简单快捷的办法，只需通过两三次测量就可以得出温度，这就是利用色指数。同一颗星在不同波段的测光星等之差称为色指数。常用的色指数定义为恒星的照相星等和目视星等（或仿视星等）之差，用
+<span class="math inline">C</span> 来表示， <span class="math inline">C
+= m_{\mathrm{p}} - m_{\mathrm{v}}</span> 或 <span class="math inline">C
+= m_{\mathrm{p}} - m_{\mathrm{pv}}</span>
+。由于人眼对黄绿光敏感，而照相底片对蓝紫光敏感，故蓝色星在照相底片上比目视要亮一些，而红色星在照相底片上比目视要暗一些。因此，蓝色星的色指数为负值而红色星的色指数为正值。研究表明，恒星的表面温度与色指数
+<span class="math inline">C</span> 之间的近似关系为：</p>
+<p><span class="math display">
+T = \frac {7 2 0 0}{C + 0 . 6 4} \mathrm{K}\tag{2.8}
+</span></p>
+<p>这样定义的恒星表面温度称为色温度。由此可见，色指数越负，恒星的表面温度就越高；反之，色指数越正，恒星的表面温度就越低。</p>
+<p>除了上述由两色测光定义的色指数外，还常采用在几个不同波段上测量星光强度的多色测光系统。现在已经有一套标准滤光片来测量不同波长处的恒星亮度，以代替照相底片和目视测量。这套滤光片包括
+<span class="math inline">U</span> （紫外）、 <span
+class="math inline">B</span> （蓝）、 <span class="math inline">V</span>
+（可见光中心）、 <span class="math inline">R</span> （红）以及 <span
+class="math inline">I</span>
+（红外）等颜色，其相应的波长及滤色宽度见表2.1。对同一颗恒</p>
+<p>表 2.1 多色测光系统的滤光片参数</p>
+<table>
+<thead>
+<tr class="header">
+<th>滤光片</th>
+<th>峰值波长(nm)</th>
+<th>滤波宽度(nm)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>U</td>
+<td>350</td>
+<td>70</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>435</td>
+<td>100</td>
+</tr>
+<tr class="odd">
+<td>V</td>
+<td>555</td>
+<td>80</td>
+</tr>
+<tr class="even">
+<td>R</td>
+<td>680</td>
+<td>150</td>
+</tr>
+<tr class="odd">
+<td>I</td>
+<td>800</td>
+<td>150</td>
+</tr>
+</tbody>
+</table>
+<p>星，不同的滤光片给出各自的星等，因而可以构成 <span
+class="math inline">UBV</span> 三色测光系统以及更多色的测光系统。在
+<span class="math inline">UBV</span>
+三色测光系统的情况下，色指数直接写为 <span class="math inline">B -
+V</span> 或 <span class="math inline">U - B</span>
+。此时色温度的形式与(2.8)式有所不同，例如用 <span class="math inline">B
+- V</span> 表示时有</p>
+<p><span class="math display">
+T = \frac {7 0 9 0}{(B - V) + 0 . 7 1} \mathrm{K}\tag{2.9}
+</span></p>
+<p>而对于表面温度在 <span class="math inline">4\ 000\ K \sim 10\ 000\
+K</span> 的恒星, 更好的近似关系为</p>
+<p><span class="math display">
+T = \frac {8 5 4 0}{(B - V) + 0 . 8 6 5} \mathrm{K}\tag{2.10}
+</span></p>
+<p>图2.2表示不同温度的黑体辐射相应的 <span class="math inline">B,
+V</span> 星等的比较。图2.3给出色指数与色温度之间的对应关系。</p>
+<p><img
+src="images/db1ae6e7c8582ce742056d2130e88ab403a227ddcfeda0adc7189a35d9eeafe7.jpg" />
+图 2.2 不同温度的黑体辐射</p>
+<p>相应的 <span class="math inline">B, V</span> 星等比较 <img
+src="images/ccbde422438ac084f4a4889b9b69d21e504186f6366951ab5c50bb502989c593.jpg" />
+图 2.3 恒星的色指数 B-V 和 U-B与色温度的关系</p>
+<p>还需要指出,除了地球大气消光以外,星际红化和星际消光也可以影响到观测的恒星颜色和星等。星际红化是指,星际空间存在大量的气体和尘埃,它们对短波光线的散射很强烈,因而使恒星的颜色显得偏红;星际消光是指,这些气体和尘埃还会吸收或屏蔽光线,使得星光变暗。故在实际观测中,也要做星际红化和星际消光方面相应的改正。</p>
+<h4 id="有效温度">2.2.2 有效温度</h4>
+<p>除了用色指数定义的色温度外，通常还把与恒星的光度 L
+相同的绝对黑体的温度，定义为恒星的有效温度 <span
+class="math inline">T_{e}</span> ，即</p>
+<p><span class="math display">
+L = 4 \pi R ^ {2} \sigma T _ {e} ^ {4} \Rightarrow T _ {e} = \left(\frac
+{L}{4 \pi R ^ {2} \sigma}\right) ^ {1 / 4}\tag{2.11}
+</span></p>
+<p>其中 R 为恒星的半径， <span class="math inline">\sigma</span>
+为斯特藩-玻尔兹曼常量。显然，有效温度也就是辐射功率与恒星相同的等效黑体的温度。</p>
+</body>
+</html>

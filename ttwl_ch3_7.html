@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>3.7 密近双星的演化</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="/usr/share/javascript/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="/usr/share/javascript/katex/katex.min.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">3.7 密近双星的演化</h1>
+</header>
+<h3 id="密近双星的演化">3.7 密近双星的演化</h3>
+<p>恒星世界中，一半以上的恒星是双星，还有大约10%是三合星，像太阳这样的单星只占少数。双星是恒星世界的普遍现象，是最小的恒星集群。</p>
+<p>前面我们讨论过的恒星演化是关于单星的，单星基本上可以看成是一个孤立系统。一旦原恒星形成，它的演化主要依靠自身物理条件的变化，如密度、温度、压力及化学成分等，而演化的主导因素是恒星自身的引力。除了在原始恒星形成的早期阶段，以及大质量恒星演化的晚期，可能向周围空间有不同规模的物质抛射外，单星演化过程中不存在与其他恒星的物质交流。而双星特别是当两颗子星的距离很近时的情况就大为不同了。由于两颗子星非常靠近，星风、吸积过程、物质交流等影响非常显著，可能出现超高能辐射乃至各种形式的爆发（包括超新星爆发）等典型现象。像这样的一颗子星影响另一颗子星演化（或两子星之间有显著物质交流）的双星系统称为密近双星。密近双星在双星系统中较为普遍，对它们的研究可以使我们深入了解恒星的演化及内部结构，特别是对致密天体的研究、引力波探测、寻找黑洞有重大的意义。</p>
+<h4 id="洛希等势面">3.7.1 洛希等势面</h4>
+<p>不考虑物质交流时，密近双星两颗子星的运动是简单的。假定两颗子星密度分布的中心聚度都很高，也就是说，都可近似看成是质点，并且自转都可以忽略。在引力的作用下，两颗子星将围绕公共质心运转，轨道为同一平面上半径不同（设两星的质量不同）的两个圆轨道（图3.26），但它们围绕质心的公转周期或轨道角速度
+<span class="math inline">\omega</span>
+是相同的。我们现在把参考系取为与轨道角速度 <span
+class="math inline">\omega</span>
+相同的转动坐标系，这样做可以得到不随时间而变的引力场。但如果</p>
+<p><img
+src="images/b99f8f01bd1a9150b95d951128bad207f3dcb07c83dfbde6a06c4a36a6ed9277.jpg" />
+图3.26 双星的两颗子星以 质心为参考点的运动轨道</p>
+<p>要在此参考系中描述某个粒子的运动，除了引力外，还必须计入惯性离心力。通常计算中采用的是引力势和离心力势,而不是引力和离心力。对力场的这两种描述在本质上是没有区别的,因为我们从经典力学中知道,(保守)力就等于势能梯度的负值。</p>
+<p>下面我们来建立坐标系。设两子星 a, b 的质量分别为 <span
+class="math inline">M_{a}, M_{b}</span> （并设 <span
+class="math inline">M_{a} &gt; M_{b}</span> ）。两星距离为 A，公转周期
+P，因而公转角速度为 <span class="math inline">\omega = 2\pi / P</span>
+，且由开普勒第三</p>
+<p>定律有</p>
+<p><img
+src="images/f42024c4e0b2179a1de0f5dcf5a766d0988d4e53b1b3014b3cea7459f3a65675.jpg" />
+图3.27 以 <span class="math inline">a</span> 星为原点的坐标系</p>
+<p><span class="math display">
+\omega^ {2} A ^ {3} = G (M _ {a} + M _ {b})\tag{3.110}
+</span></p>
+<p>定义 <span class="math inline">b</span> 星的约化质量为 <span
+class="math inline">\mu = M_b / (M_a + M_b)</span> ，则 <span
+class="math inline">a</span> 星的约化质量为 <span class="math inline">1
+- \mu</span> 。现在我们把 <span class="math inline">a</span>
+星设为坐标原点（但注意转轴不通过原点）， <span
+class="math inline">x</span> 轴穿过 <span class="math inline">b</span>
+星为两星连线方向， <span class="math inline">y</span>
+轴在两星的轨道平面内， <span class="math inline">z</span>
+轴垂直于轨道平面（图3.27）。再以 <span class="math inline">A</span>
+为长度计量单位，则两星质心的坐标是 <span class="math inline">(\mu, 0,
+0)</span> 。不难验证，在这样的转动坐标系中，空间坐标为 <span
+class="math inline">x, y, z</span> 的 <span class="math inline">Q</span>
+点处的总势能（引力势能与离心势能之和，称为有效势） <span
+class="math inline">\Psi</span> 满足</p>
+<p><span class="math display">
+\begin{array}{l} \frac {A \Psi}{G \left(M _ {a} + M _ {b}\right)} \\ =
+\frac {1 - \mu}{\left(x ^ {2} + y ^ {2} + z ^ {2}\right) ^ {1 / 2}} +
+\frac {\mu}{[ (x - 1) ^ {2} + y ^ {2} + z ^ {2} ] ^ {1 / 2}} + \frac
+{1}{2} \left(x ^ {2} - 2 \mu x + \mu^ {2} + y ^ {2}\right)
+\end{array}\tag{3.111}
+</span></p>
+<p>显然，等号右边前两项分别表示两子星的引力势，而第三项表示离心力势。这里我们来解释一下离心力势。它应当等于
+<span class="math inline">\frac{1}{2}\omega^2 s^2</span> ，其中 <span
+class="math inline">s</span> 是 <span class="math inline">Q</span>
+点到转动轴（通过质心）的垂直距离，即 <span class="math inline">s^2 = (x
+- \mu)^2 + y^2</span> ，因此离心力势等于 <span
+class="math inline">\frac{1}{2}\omega^2 [(x - \mu)^2 + y^2]</span>
+。再利用(3.110)把 <span class="math inline">\omega^2</span>
+解出，代入到离心力势中，就可以得到(3.111)等号右边第三项。(3.111)式中的
+<span class="math inline">\Psi</span> 也称为洛希(E.Roche)势能。 <span
+class="math inline">\Psi</span>
+等于常值的点，就构成三维空间中形状不随时间而变的一族曲面，称为洛希等势面族。图3.28所示为等势面在轨道平面上的截面图，即
+<span class="math inline">z = 0</span> 时的情况。</p>
+<p>在等势面上的任意一点,有效势所确定的有效力(引力加惯性离心力)都是垂直于等势面的。因此,当一个粒子沿等势面(或等势线)运动时,不会受到力的作用,也就不需要做任何功。也就是说,粒子可以沿等势面自由运动。由有效势的分布可以计算出，在图3.28中共有5个作用力平衡的点，称为拉格朗日点。其中</p>
+<p><span class="math inline">L_{1}, L_{2}, L_{3}</span>
+为等势面鞍点（不稳定平衡点）， <span class="math inline">L_{4},
+L_{5}</span> 是稳定平衡点。 <span class="math inline">L_{1}</span>
+又称内拉格朗日点， <span class="math inline">L_{2}</span>
+称外拉格朗日点。通过 <span class="math inline">L_{1}</span>
+的等势面为两个相接的闭合曲面，形成了一个横躺的8字，它们代表了两颗子星的引力范围，称为洛希瓣（或洛希极限），又称内临界等势面，它决定了两颗子星表面最大的形状和界限。当子星在演化过程中膨胀，体积充满洛希瓣时，物质能够通过
+<span class="math inline">L_{1}</span> 逃逸到另一个子星。 <span
+class="math inline">L_{1}</span>
+亦即粒子受力为零的点，但容易看出，它的空间位置一般与质心是不重合的。在转动坐标系之外的惯性参考系中看来，整个系统只有质心是不动的，因而
+<span class="math inline">L_{1}</span> 相对质心有转动。这样，当物质通过
+<span class="math inline">L_{1}</span> 由一颗</p>
+<p><img
+src="images/de902e9a9e77ce1bc01fa7f5834a60b3a7a571d1c9fcbe5fd6b99f0f01e2c60b.jpg" />
+图 3.28
+洛希等势面族与拉格朗日点。该图取质心（×号所示）为原点，长度以两星距离 A
+为单位</p>
+<p>子星流向另一颗子星时,这部分物质携带角动量,到了另一颗子星附近就会形成吸积盘(图
+3.29)。</p>
+<p><img
+src="images/c9f15ab1b73cb1d4f69b27d192b188295561f0022ed553e7f264ea73e8947480.jpg" />
+图3.29 吸积盘的形成</p>
+<p>通常把通过 <span class="math inline">L_{2}</span>
+点的等势面称为外临界等势面，它决定了围绕两星的公共包层的最大形状和界限。外拉格朗日点
+<span class="math inline">L_{2}</span>
+是物质流出双星系统的“溢出口”。实际上， <span
+class="math inline">L_{3}</span> 也起着与 <span
+class="math inline">L_{2}</span> 相似的作用，但由于 <span
+class="math inline">L_{3}</span> 比 <span
+class="math inline">L_{2}</span> 离双星系统要远一些，故一般情况</p>
+<p>下只关注 <span class="math inline">L_{2}</span> 。</p>
+<p><img
+src="images/ddfcfcf24366d756a972a2740fcab3b7e9c3fa6c47adb86f2ca01eaecdf7a320.jpg" />
+图 3.30 密近双星的分类,从上到下为:(1)分离型,(2)半接型,(3)相接型</p>
+<p>根据密近双星整体的演化情况,可以把密近双星分为3种类型(图3.30):1)分离型,此时每一子星都比各自的洛希瓣部分小很多;2)半接型,此时其中一颗子星已膨胀并充满自己的洛希瓣;3)相接型,此时两颗子星都充满洛希瓣。显然,在后两种情况下,双星之间的物质交流就不能忽略了。</p>
+<h4 id="密近双星的演化-1">3.7.2 密近双星的演化</h4>
+<p>我们首先来看一下，当双星的总质量保持不变时，两颗子星之间的距离与两子星质量分布之间的关系。设与总轨道角动量
+J 相比，两子星的自转角动量均可忽略，则双星系统的 <span
+class="math inline">J, M_{a} + M_{b}</span>
+为常量。为方便起见，这里我们利用图 3.27，并取 Q
+点为质心，则角动量可表示为</p>
+<p><span class="math display">
+J = \left(M _ {a} r _ {a} ^ {2} + M _ {b} r _ {b} ^ {2}\right)
+\omega\tag{3.112}
+</span></p>
+<p>质心的定义给出 <span class="math inline">M_{a}r_{a} =
+M_{b}r_{b}</span> ，且 <span class="math inline">r_a + r_b = A</span>
+，故有</p>
+<p><span class="math display">
+r _ {a} = \frac {M _ {b}}{M _ {a} + M _ {b}} A = \mu A, r _ {b} = \frac
+{M _ {a}}{M _ {a} + M _ {b}} A = (1 - \mu) A\tag{3.113}
+</span></p>
+<p>注意到 <span class="math inline">M_{b} = \mu (M_{a} + M_{b}), M_{a} =
+(1 - \mu)(M_{a} + M_{b})</span> ，因而(3.112)化为</p>
+<p><span class="math display">
+J = \mu (1 - \mu) A ^ {2} (M _ {a} + M _ {b}) \omega\tag{3.114}
+</span></p>
+<p>再利用开普勒第三定律(3.110)消去(3.114)式中的 <span
+class="math inline">\omega</span> ，最后得到 <span
+class="math inline">A</span> 与 <span class="math inline">\mu</span>
+之间的关系为</p>
+<p><span class="math display">
+A = \frac {M _ {a} + M _ {b}}{G M _ {a} ^ {2} M _ {b} ^ {2}} J ^ {2} =
+\frac {J ^ {2}}{G (M _ {a} + M _ {b}) ^ {3} \mu^ {2} (1 - \mu) ^
+{2}}\tag{3.115}
+</span></p>
+<p>此式表明，如果两子星之间的物质交流使 <span
+class="math inline">M_{a}</span> 和 <span
+class="math inline">M_{b}</span> 发生变化，相当于 <span
+class="math inline">\mu</span> 在 <span class="math inline">0 &lt; \mu
+&lt; 1</span> 之间变化，则两星之间的距离也会发生变化。图3.31给出 <span
+class="math inline">A / A_0 - \mu</span> 的关系，其中 <span
+class="math inline">A_0</span> 为 <span class="math inline">\mu =
+0.5</span> （即两子星质量相等）时的 <span class="math inline">A</span>
+值。从图中可以看出，两子星的质量越平衡，它们之间的距离就越接近。</p>
+<p>自20世纪70年代以来，天体物理学家已经可以借助于计算机，对密近双星的演化过程进行精确的理论计算。只要给定两颗子星的初始质量，则单星的演化过程是已知的；接下来的主要问题是两星之间的物质交流过程。这需要仔细计算每颗星的洛希瓣的大小，计算通过内拉格朗日点
+<span class="math inline">L_{1}</span>
+流出流入物质的量，再据此修正每颗星</p>
+<p><img
+src="images/a5a469398b49c75c2b284553f838a20333e744dca60fc35a59007951f44ad1a2.jpg" />
+图3.31 密近双星的 <span class="math inline">A / A_0 - \mu</span>
+关系</p>
+<p>的质量以及接下来的演化,等等。计算过程是相当繁复的,但各种不同初始质量的演化结果都已经计算出来了。我们这里只介绍一下大致的结果。通常,双星系统中质量较大的子星(在我们假设的情况下即
+a
+星),将演化得较快,先离开主星序,变为红巨星。此时它的体积膨胀得很大,足以充满其洛希瓣。此后,物质开始由
+a 星流向 b 星,两星之间的距离也变小。同时 a
+星由于失去物质使洛希瓣变小,但余下物质仍然充满洛希瓣,继续流向 b 星。b
+星接受质量,并且流入物质的引力能以热能形式释放,故其光度增加。随后 b
+星也逐渐充满洛希瓣,直到两颗星恰好接触。在此以后,如果 a
+星继续释放物质,则多余的物质将通过外拉格朗日点 <span
+class="math inline">L_{2}</span> 逸出。</p>
+<p><img
+src="images/873d0355043fc81eb0ebef19b704315c421edd8d8b13f8faaea4441fe3a0a87a.jpg" />
+(a)白矮星吸积</p>
+<p><img
+src="images/cb57cf68de074463b99343d54dd1b74d684658150a194bd721b3357c6bf124f8.jpg" />
+(b)中子星吸积 图3.32 致密星的吸积</p>
+<p>因为 a 星是巨星, 所以洛希瓣只比中心氦核稍大,
+物质的流出将继续到几乎把整个氢外层都流走,
+只剩下裸露的氦中心核。如果核的质量小于氦闪的临界质量,或者发生电子简并形成碳-氧中心核时，a
+星就变成致密星——白矮星。如果核的质量大于钱德拉塞卡极限 <span
+class="math inline">M_{ch} \sim 1.4M_{\odot}</span>
+，则内部将演化成铁中心核，继而发生超新星爆发，最后成为中子星或黑洞。</p>
+<p>上述过程结束后，a 星已成为裸露的致密星（白矮星、中子星或黑洞）。但 b
+星将继续演化，充满洛希瓣后，开始向 a
+星的第二次物质交流。这样就转化为致密星的吸积问题。</p>
+<h4 id="几种典型的最终演化结果">3.7.3 几种典型的最终演化结果</h4>
+<p>在密近双星演化的最后阶段，先演化成为致密星的子星，开始对另一颗子星物质进行吸积。如前所述，内拉格朗日点
+<span class="math inline">L_{1}</span>
+与双星系统的质心不重合，并相对于质心有转动。因此被吸积的物质通过 <span
+class="math inline">L_{1}</span>
+进入致密星的洛希瓣时，是携带有角动量的。这就使得大多数物质不是直接落到致密星上，而是进入环绕致密星运动的轨道，即形成吸积盘。之所以形成盘，是因为角动量守恒，使物质不能沿垂直于转轴的方向落向致密星，但可以沿平行于转轴的方向运动，这样就形成扁平的盘状结构（图3.29和图3.32b）。当然，实际的恒星物质并不是理想气体或理想流体，而是有一定的粘滞性。粘滞摩擦会使角动量减小，而角动量减小就会使轨道下降。因而，吸积盘内的物质，最终还是会从内缘部分开始，逐渐地落到致密星上。</p>
+<p>被吸积物质在下落过程中，引力势能减少而动能增加，并有一部分能量变为辐射能，即增加了致密星的光度。按照位力定理给出的估计，被吸积物质失去的引力势能大约一半将变为辐射能放出，另有一半变为吸积盘的热能，使吸积盘的温度增高。因此，致密星的吸积率（即单位时间内吸积物质的质量）越大，它的光度也就越</p>
+<p><img
+src="images/127863b635378db906c6bc567fb38547117ed65e0fb0532efe8343c901f082a6.jpg" />
+图3.33 氢原子受到的引力与光压</p>
+<p>大(其中也要包括吸积盘温度升高所增加的光度)，看上去两者会成比例地增加，没有什么限制。但事实上，有一个重要的因素限制了吸积率和光度的增加，这就是辐射压。辐射压力会对下落的物质产生推斥力(光压)，因而使吸积率不能无限制地增加，而是有一个上限，这就是所谓的爱丁顿极限吸积率。</p>
+<p>为简单起见,设被吸积的物质主要由氢原子组成。在距离引力中心 r 处(见图
+3.33),单位面积的辐射压是</p>
+<p><span class="math display">
+p = \frac {1}{3} u = \frac {1}{3} \cdot \frac {L}{4 \pi r ^ {2}
+c}\tag{3.116}
+</span></p>
+<p>其中 <span class="math inline">L</span> 是 <span
+class="math inline">r</span> 处的光度， <span
+class="math inline">c</span>
+为光速。这一辐射压主要作用于电子，因而电子所受到的辐射压力是</p>
+<p><span class="math display">
+p _ {\mathrm{e}} = p \sigma_ {\mathrm{e}} = \frac {L \sigma_
+{\mathrm{e}}}{1 2 \pi r ^ {2} c}\tag{3.117}
+</span></p>
+<p>式中 <span class="math inline">\sigma_{e}</span>
+为电子的汤姆孙散射截面 ( <span
+class="math inline">\sim10^{-25}~cm^{2}</span>
+)。在极限情况下，这个辐射压与氢原子受到的引力相平衡，即</p>
+<p><span class="math display">
+\frac {L \sigma_ {e}}{1 2 \pi r ^ {2} c} = \frac {G m _ {\mathrm{H}}
+M}{r ^ {2}}\tag{3.118}
+</span></p>
+<p>这就给出光度的一个上限：</p>
+<p><span class="math display">
+L _ {\mathrm{E}} = \frac {1 2 \pi c G m _ {\mathrm{H}} M}{\sigma_ {e}}
+\simeq 4 \times 1 0 ^ {3 8} \left(\frac {M}{M _ {\odot}}\right)
+\mathrm{erg/s}\tag{3.119}
+</span></p>
+<p><span class="math inline">L_{E}</span>
+称为爱丁顿极限光度。光度超过了这一极限，被吸积的物质将不再下落。</p>
+<p>再设辐射能量完全由吸积物质的引力势能转化而来，即</p>
+<p><span class="math display">
+L \sim \frac {G M}{r} \cdot \frac {\mathrm{d} M}{\mathrm{d}
+t}\tag{3.120}
+</span></p>
+<p>由此并利用(3.119)，可知吸积率 <span class="math inline">\mathrm{d}M /
+\mathrm{d}t</span> 也必须有一个上限</p>
+<p><span class="math display">
+\frac {\mathrm{d} M}{\mathrm{d} t} \leqslant \frac {L _ {\mathrm{E}}
+r}{G M} \simeq 1 0 ^ {- 8} M _ {\odot} / \text {年}\tag{3.121}
+</span></p>
+<p>这个上限就是爱丁顿极限吸积率,它在研究致密星吸积的问题时起着很重要的作用。</p>
+<p>下面再回到密近双星演化最后阶段的讨论上来,我们主要关注致密星吸积物质后的结果。根据致密星的不同情况,其结果为:</p>
+<h4 id="白矮星的吸积">1. 白矮星的吸积</h4>
+<p>如前所述，白矮星的质量有一个上限，即钱德拉塞卡极限，大致等于 <span
+class="math inline">1.4M_{\odot}</span>
+。如果吸积物质后，白矮星的质量仍小于这一极限，则可能出现新星爆发。新星是由于物质（主要是氢）从伴星向白矮星下落，在其表面堆积并引发热核爆炸的结果。白矮星表面的温度相当高，只要表面堆积的含氢物质足够多，就可以使氢发生突然聚变，导致白矮星外层爆发。但这一爆发是局域的，不会破坏白矮星的整体结构。爆发过程进行得也很迅速，并可以在短时间内阻止周围物质的下落。爆发使得白矮星可以在几个星期内保持光辉夺目，即使远在银河系边缘也能被观测到。迄今为止观测到的最明亮的新星之一是天鹅座1975新星，它的光度达太阳的100万倍，持续照耀了3天。新星爆发产生的总能大约为
+<span class="math inline">10^{45}\mathrm{erg}</span> ，其中大约有 <span
+class="math inline">10\%</span> 储藏为星体内部的振动能，这使星体以 <span
+class="math inline">0.01\sim 1\mathrm{Hz}</span>
+的频率振动，并可以产生引力波辐射（见下一节）。多数新星只爆发一次，而有些爆发后经过一段时间，可能是数月或数年，当伴星物质在白矮星表面重新堆积到一定数量后，会引起新星再次爆发。</p>
+<p>如果落在白矮星上的物质足够多，致使白矮星的总质量超过了钱德拉塞卡极限，这时电子的简并压力不再能够抵抗引力，白矮星就会坍缩。坍缩是瞬间发生的，这就是Ia型超新星爆发。坍缩和爆发将触发一系列核反应，其中最重要的是形成放射性元素
+<span class="math inline">^{56}</span> Ni，然后通过 <span
+class="math inline">\beta</span> 衰变成为 <span
+class="math inline">^{56}</span> Co，再经 <span
+class="math inline">\beta</span> 衰变成为 <span
+class="math inline">^{56}</span> Fe。这两次 <span
+class="math inline">\beta</span>
+衰变是Ia型超新星后期光辐射的主要机制，它们的特征是指数衰减，而在Ia型超新星光变曲线中，的确看到的是这样的双指数衰减。由此我们可以认为，宇宙中的大部分铁元素是由Ia型超新星爆发合成的，因为Ⅱ型超新星爆发过程中，核心的大部分铁已经变成中子了。此外，与新星爆发不同，Ia型超新星爆发只能发生一次，爆发后白矮星彻底毁灭，只剩下碎片和灰烬。密近双星系统就此彻底瓦解，只有另一颗伴星留存下来，成为一颗单独的星。</p>
+<h4 id="中子星的吸积">2. 中子星的吸积</h4>
+<p>这是密近双星系统中，其中一颗子星首先演化成为中子星的情况。初看上去，这种情况不大可能出现，因为如果一颗子星是中子星，它必然经历过猛烈的超新星爆炸，而爆炸会把另一颗子星炸飞，从而使双星系统瓦解。但实际观测却发现，双星系统中，的确有一颗子星是中子星（脉冲星）的情况。对此人们从理论上进行了许多探讨，目前的几种解释是：1)
+超新星爆发前的双星并没有形成真正的束缚系统，爆发后才由于某种适合的条件而形成这样的系统；2)
+超新星爆发后，不一定彻底摧毁双星系统，中子星和伴星依然保持为双星，但有关轨道参数会发生改变；3)
+致密星原来是白矮星而不是中子星，但白矮星吸积物质后，不经过爆发而直接坍缩成中子星。当然，这需要改写我们前面讨论过的中子星形成的理论。</p>
+<p>中子星表面一般都有很强的磁场，这就使中子星一般都表现为脉冲星（详细讨论见下一章）。如果中子星存在于双星之中，则双星轨道运动产生的多普勒频移，会使原来的脉冲信号叠加轨道周期的信息：当脉冲星向离开我们的方向运动时，脉冲之间的间隔变长；而当脉冲星向着我们运动时，这一间隔将变短。因此通过对接收到的脉冲信号的频谱分析，就可以把轨道周期的信息分离出来。正是利用这一原理，泰勒(J.
+Taylor)和赫尔斯(R.
+Hulse)1974年发现，脉冲星PSR1913+16是双星系统中的一颗子星，其脉冲周期为0.059s，轨道周期为27907s（约7小时45分）。轨道周期非常短，故只能是密近双星。更重要的是，他们发现轨道周期以
+<span class="math inline">-2.4\times10^{-12}</span>
+s/s的速率变化（公转速率加快），这样的速率变化正好与密近双星引力波辐射所预言的变化一致（见下一节）。由于泰勒和赫尔斯对脉冲双星的出色研究，他们获得了1993年度的诺贝尔物理学奖。</p>
+<p>另一颗伴星也可能最后演化为致密星(通过爆发)，结果双星都成为致密星。例如
+PSR1913+16
+所在的双星系统，两颗子星都是中子星(脉冲星)。但由于另一颗子星的脉冲辐射方向没有对着地球，所以看不到它的脉冲。可以想象，要使两颗子星很窄的辐射光束都正好对着地球，这样的几率实在是太低了。至今只观测到一例来自同一双星系统的两颗脉冲星的脉冲信号，即2003年发现的PSR
+J0737-3039。</p>
+<p>与密近双星中的中子星吸积相联系的，还有另一个重要的现象，就是毫秒脉冲星（参见4.3.4节）。这是脉冲星中脉冲周期最短的一类。与通常脉冲星显著不同的是，通常脉冲星由于自转动能的损耗会越转越慢，即脉冲周期会逐渐变长；但毫秒脉冲星的转动速率变化极小（是所有天文“时钟”中走时最稳定的），这表明自转动能（或自转角动量）必然得到了某种补充。现在认为，这是由于伴星物质在该脉冲星周围形成了吸积盘，随着物质从吸积盘持续地落到脉冲星表面，也把角动量带给了脉冲星，从而补充了转动能量的损失。另一方面，这样的角动量转移也可以解释毫秒脉冲星的形成：一个自转较慢的普通脉冲星，如果从吸积盘一下子获得了很大的角动量，则可能自转加速而变为毫秒脉冲星。</p>
+<p>最后谈一下 X
+射线双星。由于中子星表面的引力远强于白矮星（我们将在下一章更仔细地讨论这一问题），伴星物质向中子星回流下落的过程中，失去的引力势能转化为吸积盘的热能，会使吸积盘达到很高的温度。例如著名的
+X 射线源武仙座 X-1，观测表明它是一个周期为 1.7 天的双星，吸积率为 <span
+class="math inline">10^{-9} M_{5}</span> /年，相当于每秒钟吸积约 1000
+亿吨的物质，这使得吸积盘的温度高达 1 亿度。在这样高的温度下，能量为 kT
+的光子相应的平均波长是 0.14 nm，正好处于 X 射线波段（X 射线的波长范围是
+0.001～10 nm，其中 0.001～0.1 nm 波段称为硬 X 射线，0.1～10 nm
+波段称为软 X 射线）。因此中子星会发出很强的 X
+射线辐射。如果吸积物质落到转动的中子星的磁极，则将表现为 X
+射线脉冲星。如果吸积物质在中子星表面堆积，也会产生新星爆发那样的 X
+射线暴，但释放的能量要大得多。因为中子星表面的引力比白矮星强很多，故下落物质使其表面达到比白矮星高出很多的温度。因此，被吸积的氢在中子星表面形成高温高密的壳层，并迅速以非爆发形式由氢转变成氦。这样，氦就覆盖了中子星的表面。当氦层厚度达到
+1 m 时，就会发生爆发式的氦聚变，这就是 X 射线暴。像新星一样，X
+射线暴也可能重复爆发，且没有任何周期性。但 X 射线暴极为罕见，估计每 10
+亿颗恒星中只能出现一颗。</p>
+<h4 id="黑洞的吸积">3. 黑洞的吸积</h4>
+<p>如果致密星的质量超过了中子星的临界质量(大约 <span
+class="math inline">3M_{5}</span>
+)，在坍缩过程中就会变为黑洞。我们将在下一章中系统地介绍有关黑洞的知识，这里只简单地谈一下包含黑洞的双星系统。通过双星发现黑洞，是目前探寻黑洞的主要方向之一。恒星级的黑洞大小只有几公里，因此直接观测黑洞是不可能的，只有通过间接的办法，例如黑洞吸积伴星物质后的光学表现。黑洞的引力场比中子星更强，吸积盘的尺度更小，因而物质落到吸积盘上时，可以发出X射线甚至更高能的辐射。对恒星级黑洞而言，只要能确定发出高能辐射区域的大小为黑洞尺度，并且致密天体的质量为恒星量级，就可以基本上确定该天体为黑洞。黑洞的大小可以通过辐射区域的光变时标来估计，很小的光变时标相应于很小的发光区域尺度；质量可以通过双星的轨道运动来确定。实际观测已经发现了一批恒星级黑洞的候选者，其中著名的有天鹅座X-1，大麦哲伦云里的LMCX-3，麒麟座V616以及SS433等。这些天体都是很强的X射线源，并且有时标很短的光变。但由于观测上仍然存在一些不确定性因素，所以至今为止，还不能百分之百地认定它们就是黑洞。</p>
+</body>
+</html>

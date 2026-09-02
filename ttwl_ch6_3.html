@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>6.3 星系团和超星系团</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="/usr/share/javascript/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="/usr/share/javascript/katex/katex.min.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">6.3 星系团和超星系团</h1>
+</header>
+<h3 id="星系团和超星系团">6.3 星系团和超星系团</h3>
+<h4 id="星系的大尺度成团结构">6.3.1 星系的大尺度成团结构</h4>
+<p>星系聚集成团的现象在天空中很普遍。从小范围讲，星系常以双重星系、三重星系及多重星系出现。双星系中有时会发现有互扰星系以及并合星系。约有半数的明亮星系构成双重或多重星系，这些多重结构又可进一步构成小的星系群。例如，大小麦哲伦云是双重星系（大麦云距离我们17万光年，小麦云距离20万光年，它们之间相距5万光年），它们与银河系构成三重星系（大小麦云中都含有大量星际气体，在银河系的引力作用下，一部分气体伸向银河系，形成“气体桥”），并进而与御夫星系等近距星系形成多重星系。这个系统又与以
+M31 为中心的另一个多重星系构成本星系群的两个星系集中区。本星系群是以 M31
+为中心，尺度大约为 1 Mpc 的一个空间范围，成员约 40
+个左右，其中有两个巨型旋涡星系（银河系与 M31），一个中型 S
+星系（M33），其余都是矮椭圆星系和不规则星系。</p>
+<p>星系群的成员数一般在100个以下。比星系群更大的成团结构是星系团，它包括成百上千个星系，多的可达上万个。一般来说，星系的尺度量级为
+<span class="math inline">10\mathrm{kpc}</span> ，多</p>
+<p>重星系为 100 kpc，星系团为 1
+Mpc。星系团的质量可以用类似前面椭圆星系的方法，即通过位力定理求出。结果表明，星系团的质量范围是
+<span class="math inline">10^{13} \sim 10^{15} M_{\odot}</span>
+，但几何尺度相差并不是很大。它们的形状各有不同，有的结构紧致，有的相当松散。例如，离我们最近（约
+19 Mpc）的室女座（Virgo）星系团，成员超过 2500
+个，是一个外形不规则的星系团。而离银河系约 113 Mpc
+的后发座（Coma）星系团（图 6.36），包含星系总数估计在 1
+万个以上，则显出中央非常密集的形状，中央亮星系数超过 1000
+个，其中有两个超巨型星系，即巨椭圆星系 NGC4889 和巨旋涡星系</p>
+<p><img
+src="images/719a48b9c303bdbb7a20491399360d1d1f58c0b079b7610ff24f16b7645bf2e5.jpg" />
+图 6.36 后发座(Coma)星系团, 包括一万个以上的星系, 其中亮星系超过 1000
+个</p>
+<p>NGC4874。观测结果表明，至少有 <span class="math inline">85\%</span>
+的星系是处在群或团这样的成团结构之中；而且，在星系团里的星系约有 <span
+class="math inline">80\%</span>
+是椭圆星系，而不在星系团中的星系（即所谓场星系），约有 <span
+class="math inline">80\%</span>
+是旋涡星系。近年来的空间观测发现，许多星系团中弥漫着很强的X射线辐射，但对于这些X射线辐射的起因，目前还没有得到令人信服的解释。</p>
+<p>比星系团更高一级的成团结构称为超星系团。例如，本星系群和室女团、大熊星系团以及其他约50个左右较小的群或团组成了本超星系团(图6.37)，它是一个巨大的、呈扁平状的星系集群，其中包括2175个亮星系，中心在室女团附近，尺度约30～75
+Mpc。本星系群位于该超星系团的边缘附近，估计银河系统本超星系团中心公转的周期为1000亿年。除成员最多的本超星系团外，其他超星系团一般只包含几个星系团，呈扁长状，长度在60～100
+Mpc左右。超星系团成员之间的引力作用，要比星系团内星系之间的引力作用弱得多，说明在这样大的尺度上，引力成</p>
+<p>团的趋势明显减弱。</p>
+<p>图6.37b 本星系群附近 <span
+class="math inline">80h^{-1}\mathrm{Mpc}</span> 范围内星系团的分布 <img
+src="images/4db50ddfe613fd6f9456b77802934c934986a87c3acfdc2982b4e53b62afc12a.jpg" />
+图6.37a 本超星系团的主要成员</p>
+<p><img
+src="images/e20d0d25c7c5ec5b2593849440af9f66f00d8a65ad44b30e601c2a5e275b0acc.jpg" /></p>
+<p>超星系团的存在，表明宇宙空间的物质分布在大约100
+Mpc的尺度内是不均匀的。除了超星系团外，还发现宇宙中存在一些区域，其中的星系特别少，这称为空洞或巨洞。比如在牧夫座方向就发现一个尺度达60
+Mpc的巨大空洞，空洞内的星系密度只有平均值的1/5或更低。而在另外一个离银河系约100
+Mpc的地方，有一个横向跨距很大、呈片状的星系密集区，长约170 Mpc，宽约60
+Mpc，厚度大约5
+Mpc，称为宇宙“长城”（图6.38），其中的星系密度是平均密度的5倍左右，总质量为银河系的几十万倍，是目前所知的宇宙中最大的星系聚集结构。</p>
+<p><img
+src="images/911156210deb8b6977b38d6375f996ce195e38231e65bad384c837496127ddc0.jpg" />
+图6.38a 宇宙在一个扇形“切</p>
+<p><img
+src="images/a3dd4acfd1693bc9b51e558d5e9115d76c758c1978954c0168ca405b942096eb.jpg" />
+图6.38b 更细致的图像 片”中显示的空洞和“长城”结构</p>
+<p>超星系团之上是否还有更高的成团结构？经过大量的观测分析，人们发现超星系团之间不再有成团的倾向，而是趋于均匀分布。也就是说，我们的宇宙在大于几百个Mpc的尺度上，就可以看作是均匀、各向同性的了。目前把我们观测所及的宇宙部分称为总星系，总星系的典型尺度为100亿光年。</p>
+<h4 id="星系的大尺度本动速度">6.3.2 星系的大尺度本动速度</h4>
+<p>由于星系的分布在大约 100 Mpc
+的尺度上呈现不均匀性，因此在这一尺度上，每个星系所受到的周围星系或星系团的平均引力作用就不会完全抵消。这样，除了与宇宙膨胀同步的运动（即所谓哈勃流）外，每个星系都还有自己的本动速度，即由于周围引力大小的涨落而产生的附加速度，或对哈勃流的偏离速度。本质上说，本动速度的起因是周围物质密度的涨落，其中不仅有恒星等发光物质的贡献，也包括不发光的暗物质的贡献，实际上后者的作用更为重要。因而，对本动速度的测量可以提供宇宙物质特别是宇宙暗物质分布的重要信息。</p>
+<p>对星系大尺度本动速度的系统研究开始于1976年卢宾(V.
+Rubin)等人的测量工作。他们用全天分布的96个旋涡星系样本，得到太阳相对于上述样本星系平均背景的运动速度约为
+<span class="math inline">600\mathrm{km / s}</span> ，方向为 <span
+class="math inline">\alpha \approx 30^{\circ}</span> ， <span
+class="math inline">\delta \approx 50^{\circ}(\alpha, \delta</span>
+分别代表天球坐标的赤经、赤纬）。而宇宙微波背景辐射(Cosmic Microwave
+Background
+radiation，简称CMB)的偶极各向异性表明，太阳相对于CMB的运动速度约为 <span
+class="math inline">370\mathrm{km / s}</span> ，方向为 <span
+class="math inline">\alpha = 168^{\circ}, \delta = -7^{\circ}</span>
+。由这两个速度差可以算出这些样本星系相对于CMB的运动速度大约为 <span
+class="math inline">600\mathrm{km / s}</span>
+，即它们所分布的区域(尺度大约为85Mpc，其中包含几千个星系)正以大约 <span
+class="math inline">600\mathrm{km / s}</span>
+的速度相对于哈勃流漂移。这样大的本动速度是远远超出当时人们所预期的。利用太阳相对于CMB的运动速度，扣除掉太阳相对于银河系、银河系相对于本星系群中心的速度，现在得到的本星系群相对于CMB的本动速度是
+<span class="math inline">627\mathrm{km / s}</span>
+，向着长蛇座方向。</p>
+<p>当然，星系本动速度的测量不是一件容易的事情。必须用与红移无关的方法测定星系的距离，从而得到它的哈勃速度；再用红移所表征的实际速度减去哈勃速度，才得到本动速度。现在已经有了一些较为可靠的、与红移无关的测定星系距离的方法，例如我们前面讨论过的，利用旋涡星系的自转速率与星系光度之间的突利-费舍尔关系，即把自转速率作为星系本身光度的一种指示，再由光度和视星等的关系求出距离；或利用椭圆星系的光度与速度弥散
+<span class="math inline">\sigma</span> 之间的法博-杰克森关系（即 <span
+class="math inline">L\infty \sigma^4</span> 或 <span
+class="math inline">D_{n} - \sigma</span>
+关系），来确定星系的绝对光度，从而得出距离，等等。自20世纪80年代以来，人们采用多种不同的方法，在不同的尺度上进行了大量的测量工作，为研究星系大尺度本动速度积累了丰富的观测数据。</p>
+<p>在此基础上，由观测到的星系大尺度本动速度场就可以求出物质密度扰动场的分布，即实现密度扰动场的重构。我们在此不详述细节，简单说来就是，把本动速度场
+v 表示为某个标量场 <span class="math inline">\psi</span> 的梯度</p>
+<p><span class="math display">
+\boldsymbol {v} = - \nabla \psi\tag{6.34}
+</span></p>
+<p><span class="math inline">\psi</span>
+称为速度势。再由相关的流体力学方法可以得到速度势所满足的泊松方程</p>
+<p><span class="math display">
+\nabla^ {2} \psi = H f a ^ {2} \delta\tag{6.35}
+</span></p>
+<p>其中 <span class="math inline">H, f, a</span>
+等是与空间坐标无关的宇宙学参数。因此，只要知道了速度势函数的空间分布，就可以根据(6.35)得出密度扰动场
+<span class="math inline">\delta</span>
+的分布，即完成密度扰动场的重构（见图6.39）。这一方法被称之为POTENT方法。结果表明，在几十个Mpc的范围内，所有的星系都受到一个质量巨大的巨吸引子(Great
+Attractor)的引力吸引，从而朝着它的方向运动。这个巨吸引子的中心位于长蛇座和半人马座之间的方向，距离我们约为
+<span class="math inline">42h^{-1}\mathrm{Mpc}</span>
+（见图6.39b），总质量达 <span class="math inline">5\times
+10^{16}M_{\odot}</span>
+。但在那个区域只观测到大约7500个星系，它们的总质量最多只有巨吸引子质量的
+<span class="math inline">10\%</span>
+左右。因此人们猜测，巨吸引子质量的大约 <span
+class="math inline">90\%</span>
+应当是宇宙暗物质贡献的。总之，关于这个巨吸引子的本质以及它是如何形成的，至今仍然是一个谜。</p>
+<p><img
+src="images/737489e76ba02c9e0ee5fbfe75075397e57fc1e7e0c2bd46bbab051bc00078b4.jpg" /></p>
+<p><img
+src="images/7709df432f87bfda7b066280dbc8d498085915221255e9959a14ebaf89243be7.jpg" />
+图 6.39a 用 POTENT 方法得到的本超星系团平面上的速度-密度分布,
+矢量场表示本动速度场, 等高线代表密度分布 图 6.39b
+由本动速度场重构的物质密度分布，图中 GA
+代表巨吸引子(银河系位于图的中央)</p>
+<h4 id="星系团的-x-射线辐射">6.3.3 星系团的 X 射线辐射</h4>
+<p>自1977年高能天文台(HEAO)系列计划的X射线卫星陆续发射后，就观测到许多星系团发出的X射线辐射(参见图6.40)。这些X射线观测加上光学观测的结果表明，星系团内包含大量的星系际介质。星系际介质的成分可以分成两种，一种是弥漫的、不规则分布的恒星，另一种是热的、大致均匀分布的星系际气体，这些气体占据了星系之间的广大空间，并充满整个星系团的引力势阱。X射线的光度范围达
+<span class="math inline">10^{36} \sim 10^{38}\mathrm{W}</span> ，或
+<span class="math inline">10^{43} \sim 10^{45}\mathrm{erg / s}</span>
+，且对于许多富星系团来说，X射线比光学波段更亮。据估计，室女星系团的核心包含大约
+<span class="math inline">5 \times 10^{13} M_{\odot}</span>
+的X射线辐射气体，后发星系团的核心包含大约 <span class="math inline">3
+\times 10^{13} M_{\odot}</span>
+，这些气体的质量超过相应区域恒星质量的数倍。现在发现，X射线发自热气体的韧致辐射，且X射线谱显示，气体的成分多为高电离的离子，如FeXXV和FeXXVI，以及硅、氖离子。这表明，这些气体经历了星系中恒星的核合成过程。但问题随之而来：它们是如何从星系里面逃逸到星系际空间中去的呢？可能的解释是，在星系团形成的过程中，星系的碰撞与并合会经常发生（见下一节）。星系的碰撞与并合可能会使相当部分气体离开星系而进入星系际空间，也可能由于碰撞与并合而产生大量的星暴（即形成星暴星系，参见图6.9及图6.43d），重元素气体由此形成并被抛射到星系际空间。</p>
+<p><img
+src="images/3d7be43a9b96cf2dd7790415f8ce9827cd12921e05850faa80c1b5bb2793f3c5.jpg" />
+图 6.40a 后发星系团的光学像</p>
+<p><img
+src="images/827cd6d98651ee3ab66127b83af09b1107551e3d8c6480d9d98ec4be0b231db0.jpg" />
+图6.40b 后发星系团的X射线像</p>
+</body>
+</html>

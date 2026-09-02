@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>2.4 赫罗图</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="/usr/share/javascript/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="/usr/share/javascript/katex/katex.min.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">2.4 赫罗图</h1>
+</header>
+<h3 id="赫罗图">2.4 赫罗图</h3>
+<p>1905年丹麦天文学家赫茨普龙(E.
+Hertzsprung)发现，K和M光谱型的恒星中，有一些星的光度很低，比太阳要暗很多；而另一些星的光度非常高，是太阳的几百倍甚至上千倍。他于是把前者称为“矮星”，后者称为“巨星”。1911年他测定了几个银河星团(如昴星团、毕星团)中的恒星的光度和颜色，并将这两者分别作为纵坐标和横坐标，把这些恒星标在图中。结果表明，这些星大都落在一条连续带上，其余的星(巨星)则形成小群。1913年美国天文学家罗素(H.
+Russell)研究了恒星的光度和光谱，也画出一张表明恒星光度和光谱型之间的关系图。经过对比，发现颜色等价于光谱型或表面温度。实际上，他们两个人得到的图所表示的，都是恒星的光度与光谱型之间存在着相关性。因此，后来将这类光度-光谱型图称为赫茨普龙-罗素图，简称赫罗图(Hertzsprung-Russell
+Diagram)或HR图(图2.7)。图中横轴表示光谱型(或温度、或色指数)，纵轴表示光度(或绝对星等)。</p>
+<p>图 2.7a 画出的是一张 4
+万多颗近距离恒星的赫罗图。这些恒星由依巴谷天文卫星精确测量了距离，从而得到了准确的绝对星等。从图中可见，有
+3 个明显的恒星聚集区：</p>
+<p>主星序：从左上到右下的一个狭窄的带称为主星序。主星序的意义是，温度相同的恒星，大多数光度（以及大小）也基本相同，它们构成了主星序。我们观测到的
+<span class="math inline">90\%</span>
+以上的恒星都位于主星序上，称为主序星。太阳也是一颗普通的主序星。后面我们将会看到，主序星阶段是恒星一生中最稳定的阶段，恒星在这个阶段停留的时间占到整个寿命的90%以上。</p>
+<p>巨星和红超巨星:位于赫罗图右上方的是红巨星和红超巨星。它们的半径比太阳大几十倍到几百倍。肉眼可见的大角星(牧夫座
+<span class="math inline">\alpha</span> 星)、毕宿五(金牛座 <span
+class="math inline">\alpha</span> 星)是红巨星,参宿四(猎户座 <span
+class="math inline">\alpha</span> 星)和心宿二(天蝎座 <span
+class="math inline">\alpha</span>
+星)是红超巨星。它们都是银河系中体积巨大的恒星。例如,如果把参宿四放在太阳的位置上,则地球和火星的轨道都将被它所吞没。红巨星和红超巨星都是恒星演化到离开主星序后形成的。</p>
+<p>白矮星: 白矮星位于赫罗图的左下方, 它们的体积很小, 半径仅为太阳的
+1/40～1/100。天狼星伴星就是一颗典型的白矮星,
+它的体积只有太阳的四千万分之一, 比地球还要小。白矮星是超新星爆发的产物,
+是一部分恒星演化的最终归宿。</p>
+<p><img
+src="images/51a9236e8ee8dcc1f8f631b32c64df876794075f8e030717330359e9334f2f74.jpg" />
+图 2.7a 由依巴谷卫星测定了三角视差的 4
+万多颗近距离恒星的赫罗图。纵坐标分别用绝对星等及光度表示，横坐标分别用色指数和温度表示</p>
+<p><img
+src="images/fb31e370de8ddc4830378b6f86ac4a81e862f5572f5d9f49414979dcb5295c78.jpg" />
+图 2.7b 赫罗图中的等半径线, 注意横坐标同时用温度和光谱型表示</p>
+<p>图 2.7b
+所示的赫罗图上，一组平行的虚线表示恒星等半径线。从物理上很容易对此加以解释。由于恒星的光度
+L、表面有效温度 <span class="math inline">T_{e}</span> 以及半径 R
+之间满足</p>
+<p><span class="math display">
+L = 4 \pi R ^ {2} \sigma T _ {e} ^ {4}\tag{2.18}
+</span></p>
+<p>其中 <span class="math inline">\sigma</span> 为斯特藩-玻尔兹曼常量,
+对太阳有</p>
+<p><span class="math display">
+L _ {\odot} = 4 \pi R _ {\odot} ^ {2} \sigma T _ {e \odot} ^
+{4}\tag{2.19}
+</span></p>
+<p>上面两式相除,可得</p>
+<p><span class="math display">
+\lg \frac {L}{L _ {\odot}} = 2 \lg \frac {R}{R _ {\odot}} + 4 \lg \frac
+{T _ {e}}{T _ {e \odot}}\tag{2.20}
+</span></p>
+<p>利用(2.5)式,并代入太阳的有关数据,最后得到</p>
+<p><span class="math display">
+\lg \frac {R}{R _ {\odot}} = 8. 4 9 - 0. 2 M - 2 \lg T _ {e}\tag{2.21}
+</span></p>
+<p>其中 <span class="math inline">M</span>
+为恒星的绝对星等。这样，以绝对星等为纵坐标，以 <span
+class="math inline">\lg T_{e}</span>
+为横坐标的赫罗图上，恒星的等半径线是一组平行线。因而，如果知道一颗星在赫罗图上的位置，就知道了它的半径。同时(2.21)也表明，温度相同的情况下，光度越大亦即绝对星等越小的恒星，其半径也越大。联系到前面关于巨星和矮星的说法，我们也可以说，巨星的光度大、体积大，而矮星的光度小、体积小。</p>
+<p>赫罗图的建立是现代天文学发展史上的里程碑之一。恒星的表面温度和光度这两个参量，就可以反映出恒星的基本物理特征。因而，赫罗图为恒星物理的研究提供了深刻启示，对恒星演化理论的形成和发展也具有重大的意义。</p>
+<p><img
+src="images/087b20451853d7a3d527639e3df4731756fcf7b66ff6082c1c55c19b1191213c.jpg" /></p>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>2.7 恒星质量的测定</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="/usr/share/javascript/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="/usr/share/javascript/katex/katex.min.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">2.7 恒星质量的测定</h1>
+</header>
+<h3 id="恒星质量的测定">2.7 恒星质量的测定</h3>
+<h4 id="双星系统">2.7.1 双星系统</h4>
+<p>单个恒星的质量是无法用动力学方法直接得到的，只有双星系统才有可能根据轨道运动求出质量。从牛顿力学我们知道，如果双星的质量分别是
+<span class="math inline">M_{1}</span> 和 <span
+class="math inline">M_{2}</span> ，两星之间的距离是 r，公转周期是
+T，则由开普勒第三定律有</p>
+<p><span class="math display">
+\frac {r ^ {3}}{T ^ {2}} = \frac {G}{4 \pi^ {2}} (M _ {1} + M _ {2})
+</span></p>
+<p>T, r 通过观测得到后, 就知道了两星的质量之和;
+再根据下面要谈到的质光关系, 由两颗星的光度比可以得到它们的质量比,
+这样就最后求出两颗星各自的质量。表 2.5 列出了典型的主序星的质量。</p>
+<h4 id="质光关系">2.7.2 质光关系</h4>
+<p>(2.30)</p>
+<p>由恒星结构理论(见3.3节)得知,一个主序星一旦质量确定,那么它的半径和温度也就确定了,并因此也确定了光度。光度对于质量的倚赖</p>
+<p>表 2.5 光谱型与典型质量</p>
+<table>
+<thead>
+<tr class="header">
+<th>光谱型</th>
+<th><span class="math inline">M/M_{\odot}</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>O5</td>
+<td>40</td>
+</tr>
+<tr class="even">
+<td>B5</td>
+<td>7.1</td>
+</tr>
+<tr class="odd">
+<td>A5</td>
+<td>2.2</td>
+</tr>
+<tr class="even">
+<td>F5</td>
+<td>1.4</td>
+</tr>
+<tr class="odd">
+<td>G5</td>
+<td>0.9</td>
+</tr>
+<tr class="even">
+<td>K5</td>
+<td>0.7</td>
+</tr>
+<tr class="odd">
+<td>M5</td>
+<td>0.2</td>
+</tr>
+</tbody>
+</table>
+<p>关系称为质光关系，从恒星理论得到的质光关系如图2.20。除物理性质特殊的巨星、白矮星和某些致密天体外，占恒星总数
+<span class="math inline">90\%</span>
+的主序星都符合这一质光关系。它可以近似地表示为，光度是质量的幂函数：</p>
+<p><span class="math display">
+L / L _ {\odot} \propto (M / M _ {\odot}) ^ {\alpha}\tag{2.31}
+</span></p>
+<p>但单一的 <span class="math inline">\alpha</span>
+值并不适用于主星序的整个质量范围。研究表明， <span
+class="math inline">\alpha</span> 的近似值为</p>
+<p><span class="math display">
+\begin{array}{l l} {\alpha = 1. 8 \qquad \text {对于} M &lt;   0. 3 M _
+{\odot}} &amp; {\mathrm{(低质量)}} \\ {\alpha = 4. 0 \qquad \text {对于}
+0. 3 M _ {\odot} &lt;   M &lt;   3 M _ {\odot}} &amp;
+{\mathrm{(中等质量)}} \\ {\alpha = 2. 8 \qquad \text {对于} M &gt; 3 M _
+{\odot}} &amp; {\mathrm{(大质量)}} \end{array}\tag{2.32}
+</span></p>
+<p><img
+src="images/963a2c96cf0f36ad0a316a773bfc03808fe2aab4034574e39518043b86c21fbc.jpg" />
+图2.20 主序星的质光关系</p>
+<h4 id="位力定理">2.7.3 位力定理</h4>
+<p>对于一个由大量恒星组成的球状星团或椭圆星系，我们可以由该系统动力学平衡时的特征对其整体质量做出估计。这一方法根据的是位力定理。如图2.21所示，
+<span class="math inline">n</span>
+个粒子组成一个宏观稳定的动力学体系（例如星团、星系或星系团）。设第 <span
+class="math inline">i</span> 个粒子的位置矢量为 <span
+class="math inline">\pmb{r}_i</span> ，动量为 <span
+class="math inline">\pmb{p}_i</span>
+，则有（为简单起见，我们设所有的粒子质量均为 <span
+class="math inline">m</span> ）</p>
+<p><span class="math display">
+\boldsymbol {p} _ {i} = m \frac {\mathrm{d} \boldsymbol {r} _
+{i}}{\mathrm{d} t}, \boldsymbol {F} _ {i} = \frac {\mathrm{d}
+\boldsymbol {p} _ {i}}{\mathrm{d} t}\tag{2.33}
+</span></p>
+<p>其中 <span class="math inline">F_{i}</span> 为第 i
+个粒子所受到的其他所有粒</p>
+<p>子的合力。不难看出，下列等式成立</p>
+<p><span class="math display">
+\begin{array}{r l} \frac {\mathrm{d}}{\mathrm{d} t} \sum_ {i}
+\boldsymbol {p} _ {i} \cdot \boldsymbol {r} _ {i} &amp; = \sum_ {i}
+\boldsymbol {p} _ {i} \cdot \frac {\mathrm{d} \boldsymbol {r} _
+{i}}{\mathrm{d} t} + \sum_ {i} \frac {\mathrm{d} \boldsymbol {p} _
+{i}}{\mathrm{d} t} \cdot \boldsymbol {r} _ {i} \\ &amp; = 2 \times \frac
+{1}{2} \sum_ {i} \frac {\boldsymbol {p} _ {i} ^ {2}}{m} + \sum_ {i}
+\boldsymbol {F} _ {i} \cdot \boldsymbol {r} _ {i} = 2 T + \sum_ {i}
+\boldsymbol {F} _ {i} \cdot \boldsymbol {r} _ {i} \end{array}\tag{2.34}
+</span></p>
+<p>图2.21 位力定理的证明： <span class="math inline">n</span>
+个粒子组成的束缚系统 <img
+src="images/158185a37e0faf2d363c9f2f1c7a7f31bd7622791a79b0918805f8b6646ae19b.jpg" /></p>
+<p>式中 <span class="math inline">T \equiv \sum_{i} p_{i}^{2} /
+2m</span> 为整个系统的动能。取上式对时间尺度 <span
+class="math inline">\tau</span> 的平均，有</p>
+<p><span class="math display">
+\frac {1}{\tau} \int_ {0} ^ {\tau} \frac {\mathrm{d}}{\mathrm{d} t}
+\sum_ {i} \boldsymbol {p} _ {i} \cdot \boldsymbol {r} _ {i} \mathrm{d} t
+= \left\langle 2 T + \sum_ {i} \boldsymbol {F} _ {i} \cdot \boldsymbol
+{r} _ {i} \right\rangle\tag{2.35}
+</span></p>
+<p>对于一个束缚系统，每个成员的 <span class="math inline">r_i,
+p_i</span> 的大小都是有限的，故 <span class="math inline">\sum_{i} p_i
+\cdot r_i</span> 对时间求导后再积分也是有限的，因而当 <span
+class="math inline">\tau \to \infty</span>
+时，(2.35)式的左边趋于零，这意味着它的右边也必定趋于零，即时间平均值</p>
+<p><span class="math display">
+\left\langle 2 T + \sum_ {i} \boldsymbol {F} _ {i} \cdot \boldsymbol {r}
+_ {i} \right\rangle = 0\tag{2.36}
+</span></p>
+<p>设此系统是一个保守力系统,则力 F 与势</p>
+<p>能函数 <span class="math inline">V(\pmb{r})</span>
+之间的普遍关系给出</p>
+<p><span class="math display">
+\pmb {F} _ {i} = - \nabla V (\pmb {r} _ {i})\tag{2.37}
+</span></p>
+<p>如果 <span class="math inline">V(r)\propto r^n</span> ，就有</p>
+<p><span class="math display">
+\sum_ {i} \nabla V (\boldsymbol {r} _ {i}) \cdot \boldsymbol {r} _ {i} =
+\sum_ {i} \frac {\partial V (\boldsymbol {r} _ {i})}{\partial
+\boldsymbol {r} _ {i}} \cdot \boldsymbol {r} _ {i} = n \sum_ {i} V
+(\boldsymbol {r} _ {i}) = n V\tag{2.38}
+</span></p>
+<p>式中 V 为系统总的势能。因此，(2.36)变为</p>
+<p><span class="math display">
+\langle 2 T - n V \rangle = 0 \Rightarrow 2 \langle T \rangle - n
+\langle V \rangle = 0\tag{2.39}
+</span></p>
+<p>在引力势的情况下 <span class="math inline">n = -1</span>
+，故最终得到</p>
+<p><span class="math display">
+2 \langle T \rangle + \langle V \rangle = 0\tag{2.40}
+</span></p>
+<p>这就是引力束缚系统位力定理的普遍形式。假设在我们所考虑的系统中，每个成员的方均速度都一样，则单个成员的平均动能可以写成
+<span class="math inline">\langle T_i\rangle = m\langle v^2\rangle
+/2</span>
+；再设整个系统的几何形状近似于球形，这样位力定理(2.40)就可以具体写为</p>
+<p><span class="math display">
+M \langle v ^ {2} \rangle - \frac {3}{5} \frac {G M ^ {2}}{R} =
+0\tag{2.41}
+</span></p>
+<p>其中 M 为体系(星团或星系)的总质量，R
+为它的平均几何尺度。显然，这样得出</p>
+<p>的质量是动力学质量,它的大小为</p>
+<p><span class="math display">
+M \sim \frac {5}{3} \frac {R \langle v ^ {2} \rangle}{G}\tag{2.42}
+</span></p>
+<p>位力定理广泛应用于各类自引力束缚系统，甚至包括由大量星系组成的星系团。在实际应用中，
+<span class="math inline">\langle v^2 \rangle</span>
+可以根据恒星谱线的多普勒频移求出。当然，由多普勒频移求出的只是视线方向的速度，但如果设恒星的速度分布是大体各向同性的，则
+<span class="math inline">\langle v^2 \rangle</span>
+可以取为视线方向方均速度的3倍。</p>
+</body>
+</html>

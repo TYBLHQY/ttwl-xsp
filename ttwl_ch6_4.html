@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>6.4 星系的形成与演化</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="/usr/share/javascript/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="/usr/share/javascript/katex/katex.min.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">6.4 星系的形成与演化</h1>
+</header>
+<h3 id="星系的形成与演化">6.4 星系的形成与演化</h3>
+<h4 id="单个星系的形成与演化概况">6.4.1 单个星系的形成与演化概况</h4>
+<p>星系的形成与宇宙早期的密度扰动演化有密切关系。目前流行的看法是，在宇宙大爆炸的过程中，极早期就产生了原初物质密度涨落。这些原初密度涨落由于引力不稳定性而不断加强，从而使原来弥散的星系介质(原始星云)凝聚、收缩而成为原星系，再进一步演化为星系。关于宇宙早期密度扰动的演化我们将在下一章中再仔细讨论。这里只简要介绍一下有关星系形态演化的一些主要看法。</p>
+<p>20
+世纪二三十年代时曾认为，星系的形态序列即哈勃序列就是演化序列。当时有两种不同的看法，一种看法认为，原来球对称的原星系通过自转而逐渐变扁，再形成旋臂，然后旋臂慢慢变松并消失，也就是先形成椭圆星系，再变为旋涡星系，最后演化为不规则星系。另一种看法则认为，原星系形成时是形态不规则的，后来由于转动而获得轴对称性以及旋臂结构，变成旋涡星系，但最终旋臂消失而成为椭圆星系。现在我们知道，星系的形态序列并不是演化序列，因为旋涡星系、椭圆星系都具有老年星，而且年龄差不多。同时，质量、角动量等这些量的差别也表明，除非星系之间发生碰撞和并合，不同星系类型之间一般是不会彼此转化的。</p>
+<p><img
+src="images/d744608420618200bd8056750fc563db8c18655f9f32a9708c27d64fddf7fba9.jpg" />
+图 6.41a 旋涡星系形成的图解</p>
+<p><img
+src="images/3efbc0fb8d1f3b7835c4c04a5eaff1d362166348fec312e3b33bdcff9e6bfa02.jpg" />
+图 6.41b 旋涡星系中恒星的形成</p>
+<p>目前较为公认的看法是，原始星云在收缩过程中，出现第一代恒星。在原星系的中心区，收缩快、密度高，恒星形成率也高。由于中心区的剧烈弛豫过程，形成旋涡星系的星系核或椭圆星系的整体。如果星系有整体自转，则离心力将阻止赤道面（银道面）上的进一步收缩，并造成不同的扁度。气体的随机运动和恒星的辐射加热过程使得部分气体未成为星胚，并由碰撞作用而沉向赤道面，最终形成旋涡星系（见图6.41）。旋涡星系的第一代恒星诞生率较低，所以有部分气体保留了下来。计算表明，不同的初始密度和初始速度的弥散度，可以形成核球和星系盘之间大小比例不同的星系，这就可以大致解释Sa、Sb、Sc三种次型。椭圆星系由于原始星云密度大，速度弥散度也较大，恒星形成率一开始就非常高，气体几乎全部用来形成恒星。而不规则星系的恒星诞生率比旋涡星系还低，故至今有更多气体遗留下来。观测发现，在规则星系团中，物质密度、速度弥散都大，成员中椭圆星系多。而不规则星系团中，密度较小，椭圆星系较少。在富星系团中，成员以椭圆星系为主，旋涡星系很少，其中心区域则完全观测不到旋涡星系。旋涡星系主要是场星系（即非成团的孤立星系）或是疏散星系群的成员，这反映出那里的密度和速度弥散</p>
+<p>度都比较低。</p>
+<p>对于单个星系来说，星系形态从形成之初就基本定型，除非因邻近的伴星系的潮汐作用等因素，造成物质“桥”、“尾”或剥去星系外围物质，或是星系之间的直接碰撞，星系结构一般无大变化。</p>
+<h4 id="星系的相互作用与并合">6.4.2 星系的相互作用与并合</h4>
+<p>长期以来人们一直认为，星系的演化以单个星系为主，星系之间的相互作用不是很重要。但近十几年来，许多观测事实的发现已使这种看法发生了根本性的改变。例如综合口径射电望远镜阵(VLA)发现，大约
+<span class="math inline">50\%</span>
+的旋涡星系(包括银河系在内)的星系盘有翘曲现象，这表明它们与邻近星系之间有引力(潮汐力)相互作用。此外，超过一半的椭圆星系包含有不只一个分立的恒星壳层，还有些星系甚至显示核心处有两个大质量黑洞存在(如图6.42)，这些显然都是星系并合的迹象。哈勃空间望远镜更是直接拍摄到一批星系碰撞或并合的图片(见图6.43)，此外还有三个星系的碰撞甚至星系团之间的碰撞(见图6.44)。</p>
+<p><img
+src="images/a1ca2c703099146da710f4adb1d671d3fb20f7e3f7b0472365e636dcda30651a.jpg" />
+图6.42a 哈勃望远镜在光学波段 拍摄的“蝴蝶状”星系NGC6240</p>
+<p><img
+src="images/803f75fbfc181788d736f8b92c5002ab33c410ce24a67f4b0bc210730ccd2899.jpg" />
+图6.42b
+钱德拉X射线空间天文台拍摄的同一星系照片，显示其核心区域可能存在两个黑洞</p>
+<p>按照现在的看法,
+宇宙结构的形成过程是所谓“自下而上”(bottom-up)的模式(见下一章),
+即先形成较小尺度的结构, 然后通过它们之间的聚集及并合,
+而逐渐形成尺度越来越大的结构(亦称为等级式成团模式)。显然在这样的模式下,
+不仅星系团的形成一般要晚于星系的形成,
+而且星系本身的形成也可能经历一个并合阶段,
+例如大的星系可能就是由较小的星系碰撞、并合而成的。我们知道,
+星系之间的潮汐力作用会使双方的自转变慢，就像地球与月球的潮汐力使两者的自转都慢下来一样。星系自转变慢就会显著改变旋涡星系的结构，而两个星系最后由于引力而走到一起，更会使双方的恒星、气体物质相互交融，这样最终合并而成一个大的椭圆星系。图6.45就显示了这样一个计算机数值模拟的结果，两个旋涡星系经历大约18亿年的时间，最终并合而成为一个椭圆星系。目前认为，像这样的过程在实际的宇宙中并不是罕见的，大质量的椭圆星系很可能都是由较小的旋涡星系并合而成。</p>
+<p><img
+src="images/3b189cbf5c14d5d6ab9cbaf991c9205de8ff2f0536499d4aaf850751a8305fe1.jpg" />
+(a) NGC2163 和 NGC2207</p>
+<p><img
+src="images/ffef42f6915a21a368b91617a2fe5e5e7d6f6d7db2eca7df2070069ff25ad6e0.jpg" />
+(b) NGC3370 与其矮伴星系</p>
+<p><img
+src="images/0b78966ee28daccb829eb2664c5ebf7a961716849bf20a6910398a128939e382.jpg" />
+(c) NGC1410 与 NGC1409, 图中两星系间物质交流的漏斗形“管道”清晰可见</p>
+<p><img
+src="images/c544087a835a1c21e499bc2b53172f5a977747c3dcaa69a32c1b7617466b6d54.jpg" />
+(d) 天线星系: NGC4038 和 NGC4039, 两个星系的碰撞产生大量星暴</p>
+<p><img
+src="images/ca169211ded3fb0c90f1e06c7bb77e1a7c101d118c8fb89911d35b4e78de3d7e.jpg" />
+(e)
+“车轮”星系（A0035-335）与“入侵者”。但目前还不清楚右边的两个小星系谁是“入侵者”
+图6.43 哈勃望远镜拍到的星系碰撞图片</p>
+<p><img
+src="images/d98e916f84926e92410daf0b522985e23d8984e0eabcfce071e9c4c42fac3cf3.jpg" />
+图6.44a 三个星 系的碰撞</p>
+<p><img
+src="images/041b17a713e88e87c3056d45d102e1b04130cd2cd4c7a875516c9d00bae1844c.jpg" />
+图 6.44b 哈勃望远镜在红 外波段拍摄到的星系碰撞</p>
+<p><img
+src="images/20d8e0c953e3709e1d3244aee297d5b8e411e302d7b5f304d5cf04bd3e86f299.jpg" /></p>
+<p><img
+src="images/916be0f959204f633acde043cad1bfea5a3ed8535c54dde635fdb2c2203a75e3.jpg" /></p>
+<p><img
+src="images/9719be8323881526434e2eb2b7cd791172d407cab445875d703214c75c493225.jpg" /></p>
+<p><img
+src="images/5b4f1b5f42899f2f10d75ca9565d3aa826ee6d8a9dabce4081ee0f8f91303fa5.jpg" /></p>
+<p><img
+src="images/250b61b7eb35f941da84eaf2de006cf01d007b8650f1924efafec5aa74e644f9.jpg" /></p>
+<p><img
+src="images/784bb7715645330ef4d1d7d01bd4501b658064454474e887d81ef0f0f4c6d3f1.jpg" />
+图 6.45 两个旋涡星系并合成一个椭圆星系的计算机数值模拟结果,
+整个过程经历约 18 亿年。图上标注的时间单位是 1 T = 2500 万年</p>
+<p>要补充说明的是，星系的碰撞，并不意味着恒星与恒星之间发生刚体那样的碰撞。恒星之间发生直接碰撞的几率极低，完全可以忽略。但星系碰撞的过程会使恒星的运动速度慢下来，这就是星系动力学中的所谓动力学阻尼，这里我们就不进一步讨论了。重要的是，双方都携带有大量星际气体，在星系碰撞的过程中，这些气体碰到一起，将触发大量的新恒星形成和强烈的星暴。这对于解释星暴星系的产生，以及前面提到过的星系团内的重元素气体的大量存在，是非常有意义的。</p>
+</body>
+</html>

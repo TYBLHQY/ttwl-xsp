@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>2.8 恒星的年龄</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="/usr/share/javascript/katex/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="/usr/share/javascript/katex/katex.min.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">2.8 恒星的年龄</h1>
+</header>
+<h3 id="恒星的年龄">2.8 恒星的年龄</h3>
+<p>恒星年龄的确定是进一步估计星系以及宇宙年龄的基础。我们将在下一章中看到，恒星的一生主要是在主序星阶段度过的。但不同质量的恒星，在主星序阶段停留的时间长短也不同，质量越大的恒星，其寿命也越短。这一点定性地不难理解，因为恒星的总能量
+<span class="math inline">E \propto M</span>
+（爱因斯坦质能关系），但恒星的光度即能量损失率为 <span
+class="math inline">L \propto M^{\alpha}</span> （质光关系），且 <span
+class="math inline">\alpha &gt; 1</span> ，这样恒星的寿命 <span
+class="math inline">\tau</span> 大致为</p>
+<p><span class="math display">
+\tau \sim \frac {E}{L} \propto M ^ {1 - a} = \frac {1}{M ^ {a -
+1}}\tag{2.43}
+</span></p>
+<p>故恒星质量越大，演化越快，寿命越短。例如取 <span
+class="math inline">\alpha = 4, \tau \propto 1 / M^3</span> ，因而当
+<span class="math inline">M = 10M_{\odot}</span> 时有 <span
+class="math inline">\tau \sim 10^{-3}\tau_{\odot} \sim 10^{7}</span>
+年。</p>
+<p>实际上，不是全部的恒星质量都转化为辐射能。主星序阶段主要发生的是，核心区域的氢聚变为氦。一旦核心部分的氢燃烧完，恒星便离开主星序。核心部分可能最后演变为白矮星、中子星或黑洞。我们将在下一章中具体介绍这些过程。详细的理论计算给出的恒星寿命大致为</p>
+<p><span class="math display">
+\tau = \left\{ \begin{array}{l l} 1 0 ^ {1 0} \left(\frac {L _
+{\odot}}{L}\right) ^ {2 / 3} &amp; \text {年} (L &lt;   L _ {\odot}) \\
+1 0 ^ {1 0} \left(\frac {L _ {\odot}}{L}\right) ^ {3 / 4} &amp; \text
+{年} (L &gt; L _ {\odot}) \end{array} \right.\tag{2.44}
+</span></p>
+<p>再来讨论一下星团年龄的测定。一个星团中包含成千上万甚至百万颗恒星，可以把它们的光度和光谱型画在一张赫罗图上，称为星团赫罗图。星团中的恒星可以看成是同时形成的，但它们的质量不同，故演化的快慢也不同。此外，这些恒星可以看成具有相同的化学组成(因为由同一星云所形成)。由于质量大的恒星演</p>
+<p><img
+src="images/ebd40ba9cc8f88e708136e1300f181a8a01e3b35e50704474acc5a918c2a3f33.jpg" />
+图2.22 星团赫罗图上的转向 点，该星团的年龄标注在曲线上</p>
+<p>化得快，故先离开主星序，因此在星团赫罗图上就出现主序转向点（如图2.22所示）。显然，星团越年轻，主序转向点越靠主序上方。反之，星团越老，主序转向点越下降。这样，星团赫罗图上转向点位置的高低就直接显示出星团年龄的大小。实际研究中，首先是根据恒星演化理论计算出不同年龄、不同化学成分的各种星团的赫罗图，然后，再把观测到的星团赫罗图与理论赫罗图相比较，就可以得出星团的年龄。但应强调，所得的结果是与恒星演化的</p>
+<p>理论模型有关的。目前，宇宙中最古老的球状星团的年龄一般认为是 <span
+class="math inline">t_{\mathrm{GC}} \approx 13 - 17</span> Gyr(1 Gyr =
+10 <span class="math inline">^{9}</span> 年 = 10
+亿年)，这就给出宇宙年龄的下限。</p>
+<p>小结
+至此,我们已经讨论了有关恒星的各种基本物理量的测量方法,其中有些方法(例如用位力定理求质量)不仅适用于恒星,还适用于更大尺度的天体结构(例如星系和星系团)。从以上讨论中我们看到,恒星的基本物理参数可以在一个很大范围内变化,通常跨越许多量级,如表2.6所示。但我们注意到,在所有这些物理量中,只有质量的变化范围不是很大,只跨越三个量级。如我们将在下一章中看到的,恒星的质量决定了恒星演化的进程,也决定了恒星的其他物理特征。同时,只有在表2.6所列的质量范围内才能够形成恒星,主要原因是,如质量太小,则核反应无法开始,也就形成不了恒星;而如质量过大,则恒星寿命太短,几乎还没有形成稳定的星体结构,恒星就坍缩了。</p>
+<p>表 2.6 恒星主要物理参数的范围</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>物理量</th>
+<th>变化范围</th>
+<th>跨越数量级</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>光度( <span class="math inline">L_{\odot}</span> )</td>
+<td><span class="math inline">10^{-4} \sim 10^{6}</span></td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>半径( <span class="math inline">R_{\odot}</span> )</td>
+<td><span class="math inline">10^{-3} \sim 10^{3}</span></td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>质量( <span class="math inline">M_{\odot}</span> )</td>
+<td><span class="math inline">10^{-1} \sim 10^{2}</span></td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>密度( <span class="math inline">g/cm^{3}</span> )</td>
+<td><span class="math inline">10^{-9}</span> (红超巨星) <span
+class="math inline">\sim 10^{16}</span> (白矮星)</td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
